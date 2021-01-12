@@ -1,13 +1,13 @@
 # Проект "Jewellery"
 
-  [Сайт в интернете](https://demindesign.ru/jewellery/).
+**[Сайт в интернете](https://demindesign.ru/jewellery/)**.
 
-Проект создан в рамках Акселератора [HTML Academy](https://htmlacademy.ru/about).
+Проект создан в рамках Акселератора **[HTML Academy](https://htmlacademy.ru/about)**.
 
-___[Акселератор HTML Academy](https://l.htmlacademy.ru/graduates#rec177038888)___ — имитатор реальной командной работы над проектом.
+**[Акселератор HTML Academy](https://l.htmlacademy.ru/graduates#rec177038888)** — имитатор реальной командной работы над проектом.
 
 * * *
-* Разработчик: [Роман Демин](https://htmlacademy.ru/profile/id219593)
+* Разработчик: **[Роман Демин](https://htmlacademy.ru/profile/id219593)**
 
 * Куратор проектов Акселератора: **Софья Дышпан**
 * Менеджер проекта Акселератор: **Наташа Мизикевич**
@@ -47,8 +47,7 @@ ___[Акселератор HTML Academy](https://l.htmlacademy.ru/graduates#rec1
 
 * Слайдер ...
 * Автоматизирована система сжатия изображений и сборки сайта с использованием **Gulp**.
-* Сайт размещен на хостинге и протестирован на производительность c помощью
- [PageSpeed Insights]()
+* Сайт размещен на хостинге и протестирован на производительность c помощью **[PageSpeed Insights]()**
 
 
 * * *

@@ -6,8 +6,6 @@
 
 ___[Акселератор HTML Academy](https://l.htmlacademy.ru/graduates#rec177038888)___ — имитатор реальной командной работы над проектом.
 
-[TOC]
-
 * * *
 * Разработчик: [Роман Демин](https://htmlacademy.ru/profile/id219593)
 

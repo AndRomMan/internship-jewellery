@@ -1,0 +1,16 @@
+body {
+  position: relative;
+
+  background-color: $body_back;
+}
+
+.body--overflow {
+  overflow: hidden;
+}
+
+// убираем скругление для полей формы в iOs
+input,
+textarea {
+  border: none;
+  border-radius: 0;
+}

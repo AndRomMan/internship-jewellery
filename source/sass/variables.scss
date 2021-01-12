@@ -1,0 +1,67 @@
+// background for retina display
+$retina-dppx: 1.5dppx;
+// $retina-dppx: 1.1dppx;
+$retina-dpi: 144dpi;
+// $retina-dpi: 100dpi;
+
+// (min-resolution: $retina-dpi),
+// (min-resolution: $retina-dppx)
+
+// -------------------------- mobile
+$mobile_padding: 15px;
+$mobile_additional_breakpoint: 400px;
+// $mobile_width: 320px;
+// $mobile_breakpoint: 321px;
+// $mobile_width: 90.625%;
+
+// -------------------------- tablet
+$tablet_breakpoint: 767px;
+$tablet_padding: 45px;
+// $tablet_width: 768px;
+// $tablet_width: 88.28125%;
+
+// -------------------------- desktop
+$desktop_breakpoint: 1023px;
+$desktop_padding: 7.54026%;
+// $desktop_padding: 103px;
+// $desktop_width: 1024px;
+// $desktop_width: 84.9194729%;
+
+// -------------------------- basic colors
+$basic_dark_color: #011c40;
+$basic_light_color: #f9fbfd;
+$card_light_color: #d8d8d9;
+
+// -------------------------- fonts
+$font_dark_color: #011c40;
+$font_light_color: #f9fbfd;
+$font_card_color: #d8d8d9;
+
+// @include font($size, $line_height, $weight, $color);
+
+// -------------------------- background colors
+$header_background: #004b88;
+$map_background: rgba(1, 28, 64, 0.6);
+$advantages_background: #e3ecf6;
+$booking_background: #84c5e6;
+$basic_dark: #011c40;
+$background_light: #f9fbfd;
+
+// -------------------------- effect colors
+// $accent_color: #ce5d4e;
+$outline_color: #2770b4;
+$underline_tablet_shift: 25px;
+$underline_mobile_shift: 20px;
+$underline_height: 4px;
+
+// .button:hover,
+// .button:focus,
+// .button:active
+
+// @media (max-width: $desktop_breakpoint) {
+//   //
+// }
+
+// @media (max-width: $tablet_breakpoint) {
+//   //
+// }

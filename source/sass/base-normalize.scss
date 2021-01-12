@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  // меньше 320px body не сжимаем
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+img {
+  // max-width: 100%;
+  // height: auto;
+}
+
+a {
+  text-decoration: none;
+}

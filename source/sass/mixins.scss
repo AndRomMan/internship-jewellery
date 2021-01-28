@@ -1,8 +1,3 @@
-// SCSS compilation check
-body {
-  // background-color: lightskyblue;
-}
-
 .visually-hidden {
   position: absolute;
 
@@ -35,4 +30,27 @@ body {
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+// FIXME del unused mixin
+@mixin link-underline_after {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -$link-underline-shift;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $link-underline;
+  }
+}
+
+@mixin link-underline_border {
+  padding-bottom: $link-underline-shift;
+
+  border-bottom: 1px solid $link-underline;
 }

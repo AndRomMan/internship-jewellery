@@ -7,61 +7,92 @@ $retina-dpi: 144dpi;
 // (min-resolution: $retina-dpi),
 // (min-resolution: $retina-dppx)
 
-// -------------------------- mobile
+// custom properties
+// -------------------------- blocks dimensions
 $mobile_padding: 15px;
-$mobile_additional_breakpoint: 400px;
-// $mobile_width: 320px;
-// $mobile_breakpoint: 321px;
-// $mobile_width: 90.625%;
+$tablet-padding: 45px;
 
-// -------------------------- tablet
-$tablet_breakpoint: 767px;
-$tablet_padding: 45px;
-// $tablet_width: 768px;
-// $tablet_width: 88.28125%;
+:root {
+  --mobile-padding: 15px;
+  --tablet-padding: 45px;
+}
 
-// -------------------------- desktop
-$desktop_breakpoint: 1023px;
-$desktop_padding: 7.54026%;
-// $desktop_padding: 103px;
-// $desktop_width: 1024px;
-// $desktop_width: 84.9194729%;
+$mobile-min-width: 320px;
+$tablet-breakpoint: 767px;
+$desktop-breakpoint: 1023px;
+$desktop-max-width: 1170px;
+// --------------------------
+$navbar-max-width: 650px;
+$header-element-width: 100%;
+$header-element-width-tab: calc(100% - 2 * var(--tablet-padding));
+$header-element-width-mob: calc(100% - 2 * var(--mobile-padding));
+$search-form-border-radius: 21px;
+$search-form-width: 100%;
+$container-max-width: $desktop-max-width + 2 * $mobile_padding;
 
 // -------------------------- basic colors
-$basic_dark_color: #011c40;
-$basic_light_color: #f9fbfd;
-$card_light_color: #d8d8d9;
+$basic-dark: #000000;
+$basic-light: #ffffff;
+$dark-1d: #1d1613;
+// $dark-1c: #1c1612;
+$dark-grey: #9b9997;
+$silver: #c4c4c4;
+$light-grey: #f0eae4;
+$extra-light-grey: #f6f5f4;
+$dark-brown: #563f33;
+$fade-sienna: #a87b62;
 
+// -------------------------- colors of elements
+$logo-color: $fade-sienna;
+$logo-color-menu: $basic-light;
+$header-icon-color: $dark-1d;
+$header-icon-color-menu: $basic-light;
+$signup-form-icon-color: $basic-light;
+$socials-icon-color: $basic-light;
+$slider-icon: $fade-sienna;
+// $slider-btns-outline: $dark-1d;
+$slider-btns-outline: $fade-sienna;
 // -------------------------- fonts
-$font_dark_color: #011c40;
-$font_light_color: #f9fbfd;
-$font_card_color: #d8d8d9;
 
-// @include font($size, $line_height, $weight, $color);
+$font-basic-dark: $basic-dark;
+$font-basic-light: $basic-light;
+$font-dark: $dark-1d;
+// $font-dark-1c: $dark-1c;
+$font-dark-grey: $dark-grey;
+$font-expanded-menu: rgba($font-basic-light, 0.75);
+
+// @include font_poppins($size, $line_height, $weight, $color);
+// @include font_cormorant($size, $line_height, $weight, $color);
+// @include font_cormorant_italic($size, $line_height, $weight, $color);
 
 // -------------------------- background colors
-$header_background: #004b88;
-$map_background: rgba(1, 28, 64, 0.6);
-$advantages_background: #e3ecf6;
-$booking_background: #84c5e6;
-$basic_dark: #011c40;
-$background_light: #f9fbfd;
+$body_back: $basic-light;
+$header-menu-back: $fade-sienna;
+$search-form-menu-back: rgba($basic-light, 0.15);
+$footer-back: $basic-dark;
+$signup-form-back: transparent;
+$promo-back: rgba($dark-brown, 0.7);
 
-// -------------------------- effect colors
-// $accent_color: #ce5d4e;
-$outline_color: #2770b4;
-$underline_tablet_shift: 25px;
-$underline_mobile_shift: 20px;
-$underline_height: 4px;
+// -------------------------- border colors
+$header-border: $extra-light-grey;
+$signup-form-border: $basic-light;
+
+// -------------------------- shadow colors
+$promo-shadow: rgba($basic-dark, 0.25);
+
+// -------------------------- effects
+$link-underline: $fade-sienna;
+$link-underline-shift: 3px;
 
 // .button:hover,
 // .button:focus,
 // .button:active
 
-// @media (max-width: $desktop_breakpoint) {
-//   //
-// }
+// FIXME del media
+@media (max-width: $desktop-breakpoint) {
+  //
+}
 
-// @media (max-width: $tablet_breakpoint) {
-//   //
-// }
+@media (max-width: $tablet-breakpoint) {
+  //
+}

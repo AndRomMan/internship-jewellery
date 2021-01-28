@@ -1,9 +1,15 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
   "env": {
+    "es6": true,
     "browser": true
   },
   "extends": [
-    "htmlacademy/es5",
+    // "htmlacademy/es5",
+    "htmlacademy/es6",
     "prettier"
     // "eslint-config-prettier",
     // Turns off all rules that are unnecessary or might conflict with Prettier.

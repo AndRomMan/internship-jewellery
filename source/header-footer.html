@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <meta name="description" content="We offer some Jewellery to purchase a little style for yourself.">
+    <title>Jewellery shop</title>
+  </head>
+
+  <body>
+    <div class="svgbox" style="display: none;">
+      @@include('./img/compressed/sprite.svg')
+    </div>
+
+    <header class="header header--menu">
+      <div class=" container">
+        <div class="header__wrapper">
+          <button class="header__btn burger-btn" type="button">
+            <svg width="25" height="18" role="img">
+              <use xlink:href="#burger"></use>
+            </svg>
+          </button>
+
+          <form class="header__search search-form search-form--menu" action="#" method="post">
+            <label class="search-form__icon" for="usersearch">
+              <svg width="14" height="14" role="img">
+                <use xlink:href="#search"></use>
+              </svg>
+            </label>
+            <input type="search" name="usersearch" id="usersearch" placeholder="Type here to search">
+          </form>
+
+          <a class="header__logo logo logo--menu">
+            <svg width="66" height="66" role="img">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </a>
+
+          <div class="header__link-wrapper user-link">
+            <a class="user-link__item login-link" href="login.html">Login</a>
+
+            <a class="user-link__item cart-link cart-link--menu" href="#">
+              <div>
+                Cart&nbsp;
+                <span class="cart-link--counter">0</span>
+              </div>
+
+              <svg width="20" height="18" role="img">
+                <use xlink:href="#cart"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="header__navbar navbar navbar--menu">
+          <ul class="navbar__list nav-list">
+            <li class="nav-list__item">
+              <a href="#">What’s new</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Chokers</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Necklaces</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Rings</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Earrings</a>
+            </li>
+          </ul>
+
+          <ul class="navbar__list expanded-nav-list">
+            <li class="expanded-nav-list__item">
+              <a href="#">About CH</a>
+            </li>
+            <li class="expanded-nav-list__item">
+              <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
+            </li>
+            <li class="expanded-nav-list__item">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="expanded-nav-list__item expanded-nav-list__item--login">
+              <a href="login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="visually-hidden">Shop-salon of Jewellery. Join us for your benefit.</h1>
+
+      <section>
+        <h2>Header Footer</h2>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__wrapper">
+        <section class="signup">
+          <h2>
+            The good stuff in your inbox
+          </h2>
+          <p>
+            News and updates from CH. No spam, we promise.
+          </p>
+          <form class="signup__form" action="#" method="POST">
+            <label for="usermail">
+              <input type="email" name="usermail" id="usermail" placeholder="Your E-mail" required>
+            </label>
+            <button class="signup__button" type="submit">
+              Sign Up
+              <svg class="signup__icon" width="37" height="17" role="img">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </button>
+          </form>
+        </section>
+
+        <section class="terms">
+          <ul class="terms__list">
+            <li class="terms__item">
+              <a href="#">Ordering&nbsp;&#38;&nbsp;Payment</a>
+            </li>
+            <li class="terms__item">
+              <a href="#">Terms&nbsp;&#38;&nbsp;Conditions</a>
+            </li>
+            <li class="terms__item">
+              <a href="#">Returns&nbsp;&#38;&nbsp;Exchanges</a>
+            </li>
+            <li class="terms__item">
+              <a href="#">Delivery</a>
+            </li>
+          </ul>
+
+          <ul class="terms__list">
+            <li class="terms__item">
+              <a href="#">About CH</a>
+            </li>
+            <li class="terms__item">
+              <a href="#">Stores&nbsp;&#38;&nbsp;Hours</a>
+            </li>
+            <li class="terms__item">
+              <a href="#">Jobs</a>
+            </li>
+            <li class="terms__item">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </section>
+
+        <ul class="socials">
+          <li class="socials__item">
+            <a href="https://ru-ru.facebook.com">
+              <div class="socials__icon socials__icon--fb">
+                <svg width="8" height="15" role="img">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </div>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="https://www.instagram.com/">
+              <div class="socials__icon socials__icon--in">
+                <svg width="15" height="15" role="img">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </div>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="https://www.pinterest.com/">
+              <div class="socials__icon socials__icon--pn">
+                <svg width="16" height="15" role="img">
+                  <use xlink:href="#pinterest"></use>
+                </svg>
+              </div>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="https://twitter.com/">
+              <div class="socials__icon socials__icon--tw">
+                <svg width="15" height="13" role="img">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </div>
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

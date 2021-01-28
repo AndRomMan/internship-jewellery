@@ -1,0 +1,12 @@
+.section-head {
+  //
+}
+
+.section-head h2 {
+  @include font_cormorant(34px, 44px, 700, $font-dark);
+}
+
+.section-head a {
+  @include link-underline_border;
+  @include font_poppins(16px, 21px, 500, $font-dark);
+}

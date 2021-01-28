@@ -1,5 +1,35 @@
+// @import "vendor/swiper-bundle";
+@import "vendor/swiper-vars";
+@import "vendor/swiper";
+@import "vendor/pagination";
+@import "vendor/navigation";
 @import "base-normalize";
 @import "variables";
 @import "fonts";
 @import "mixins";
+@import "container";
 @import "common";
+@import "header";
+@import "burger-btn";
+@import "logo";
+@import "search-form";
+@import "user-link";
+@import "login-link";
+@import "cart-link";
+@import "navbar";
+@import "nav-list";
+@import "section-head";
+@import "expanded-nav-list";
+@import "promo";
+@import "novelties";
+@import "slider";
+@import "blog";
+@import "footer";
+@import "signup";
+@import "terms";
+@import "socials";
+
+// FIXME del tech.scss temp.scss
+// @import "tech";
+// @import "temp";
+// @import "temp-svg";

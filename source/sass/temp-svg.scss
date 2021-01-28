@@ -1,0 +1,181 @@
+.temp-svg {
+  // display: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+
+  outline: 1px solid black;
+}
+
+.svgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+
+  outline: 1px solid rgb(35, 156, 136);
+}
+
+.burger svg {
+  stroke: rgb(180, 6, 78);
+}
+
+.search svg {
+  fill: rgb(165, 1, 187);
+}
+
+.logo svg {
+  width: 40px;
+  height: 40px;
+
+  fill: rgb(165, 1, 187);
+  stroke: rgb(165, 1, 187);
+  stroke-width: 1px;
+}
+
+.cart svg {
+  fill: rgb(165, 1, 187);
+  stroke: rgb(165, 1, 187);
+}
+
+.arrow-right svg {
+  // fill: rgb(165, 1, 187);
+  stroke: rgb(165, 1, 187);
+}
+
+.arrow-left svg {
+  // fill: rgb(165, 1, 187);
+  stroke: rgb(165, 1, 187);
+}
+
+
+.arrow-long_left svg {
+  fill: rgb(165, 1, 187);
+}
+
+.arrow-long_right svg {
+  fill: rgb(165, 1, 187);
+}
+
+.chevron_down svg {
+  fill: none;
+  stroke: rgb(165, 1, 187);
+}
+
+.chevron_up svg {
+  fill: none;
+  stroke: rgb(165, 1, 187);
+}
+
+.close-round svg {
+  // fill: none;
+  // stroke: rgb(165, 1, 187);
+}
+
+.close svg {
+  fill: rgb(165, 1, 187);
+}
+
+
+.facebook svg {
+  fill: rgb(165, 1, 187);
+}
+
+.instagram svg {
+  fill: rgb(165, 1, 187);
+}
+
+.twitter svg {
+  fill: rgb(165, 1, 187);
+}
+
+
+.pinterest svg {
+  fill: rgb(165, 1, 187);
+}
+
+
+// <div class="temp-svg">
+//       <div class="svgbox burger">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#burger"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox search">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#search"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox logo">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#logo"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox cart">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#cart"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox facebook">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#facebook"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox instagram">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#instagram"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox pinterest">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#pinterest"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox twitter">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#twitter"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox arrow-left">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#arrow-left"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox arrow-long_left">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#arrow-long_left"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox arrow-right">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#arrow-right"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox arrow-long_right">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#arrow-long_right"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox chevron_down">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#chevron_down"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox chevron_up">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#chevron_up"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox close-round">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#close-round"></use>
+//         </svg>
+//       </div>
+//       <div class="svgbox close">
+//         <svg width="20" height="20" role="img">
+//           <use xlink:href="#close"></use>
+//         </svg>
+//       </div>

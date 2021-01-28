@@ -90,10 +90,18 @@ const path = {
     watch: source + 'sass/**/*.scss',
     build: build + 'css/',
   },
+  styleVendor: {
+    source: source + 'css/vendor/*.css',
+    build: build + 'css/',
+  },
   script: {
     source: source + 'js/*.js',
     watch: source + 'js/**/*.js',
     dest: source + 'js/',
+    build: build + 'js/',
+  },
+  scriptVendor: {
+    source: source + 'js/vendor/*.js',
     build: build + 'js/',
   },
   img: {
@@ -147,13 +155,23 @@ function browserSync() {
     open: true,
     cors: true,
     ui: false,
-    browser: ['chrome'],
-    // browser: ["firefox"]
+    browser: ['chrome', 'firefox'],
+    // browser: ['firefox'],
     // browser: ["chrome", "firefox"]
   });
 }
 
 // ========== javascript producing module ==========
+function copyVendorJsToBuild() {
+  return src(path.scriptVendor.source).pipe(plumber()).pipe(concat('vendor.js')).pipe(dest(path.scriptVendor.build));
+}
+exports.copyVendorJsToBuild = copyVendorJsToBuild;
+
+function copyVendorCSSToBuild() {
+  return src(path.styleVendor.source).pipe(dest(path.styleVendor.build));
+}
+// exports.copyVendorCSSToBuild = copyVendorCSSToBuild;
+
 function getJS() {
   return (
     src(path.script.source)
@@ -241,8 +259,8 @@ function compressSvgForSprite() {
         plugins: [
           {removeDimensions: true},
           {removeViewBox: false},
-          {cleanupNumericValues: {floatPrecision: 1}},
-          {cleanupListOfValues: {floatPrecision: 1}},
+          {cleanupNumericValues: {floatPrecision: 2}},
+          {cleanupListOfValues: {floatPrecision: 2}},
           {removeXMLNS: true},
           {removeStyleElement: true},
           {removeScriptElement: true},
@@ -286,7 +304,7 @@ function convertImgToWebp() {
   return (
     src(path.img.sourceWebp)
       .pipe(plumber())
-      .pipe(imagemin([imageminWebp({quality: 70})]))
+      .pipe(imagemin([imageminWebp({quality: 75})]))
       // .pipe(imagemin([imageminWebp({quality: 75, method: 4})]))
       .pipe(rename({extname: '.webp'}))
       .pipe(dest(path.img.compressedFolder))
@@ -301,8 +319,8 @@ function compressSvg() {
         plugins: [
           {removeDimensions: true},
           {removeViewBox: false},
-          {cleanupNumericValues: {floatPrecision: 1}},
-          {cleanupListOfValues: {floatPrecision: 1}},
+          {cleanupNumericValues: {floatPrecision: 2}},
+          {cleanupListOfValues: {floatPrecision: 2}},
           // {removeXMLNS: true},
           {removeStyleElement: true},
           {removeScriptElement: true},
@@ -320,7 +338,7 @@ function compressJpgPng() {
     .pipe(
       imagemin([
         imagemin.mozjpeg({
-          quality: 70,
+          quality: 75,
           progressive: true,
         }),
         // imagemin.optipng({optimizationLevel: 3}),
@@ -339,7 +357,7 @@ function compressPngQuant() {
     .pipe(
       imagemin([
         imageminPngQuant({
-          quality: [0.6, 0.65],
+          quality: [0.7, 0.75],
           speed: 6,
           strip: true,
         }),
@@ -444,8 +462,11 @@ let getImg = gulp.series(
   copyImgToBuild
 );
 
+// let getVendor = gulp.parallel(copyVendorCSSToBuild, copyVendorJsToBuild);
+let getVendor = gulp.parallel(copyVendorJsToBuild);
+
 let startServer = gulp.parallel(watchFiles, browserSync);
-let getWorkFiles = gulp.series(getCSS, getJS, getHTML);
+let getWorkFiles = gulp.series(getCSS, getJS, getHTML, getVendor);
 let workStart = gulp.series(getWorkFiles, startServer);
 let buildProject = gulp.series(eraseBuild, getImg, getWorkFiles, getFaviconToBuild, copyFontToBuild, eraseMap);
 let buildAndStart = gulp.series(eraseBuild, getImg, getWorkFiles, getFaviconToBuild, copyFontToBuild, startServer);
@@ -481,7 +502,7 @@ exports.getCSS = getCSS;
 // exports.compressSvg = compressSvg;
 // exports.createSvgSprite = createSvgSprite;
 
-exports.copyImgToBuild = copyImgToBuild;
+// exports.copyImgToBuild = copyImgToBuild;
 // exports.copyFontToBuild = copyFontToBuild;
 
 // exports.eraseCompressedImg = eraseCompressedImg;

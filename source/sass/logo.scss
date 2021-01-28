@@ -1,0 +1,28 @@
+.logo {
+  & svg {
+    width: 66px;
+    height: 66px;
+
+    fill: $logo-color;
+    stroke: $logo-color;
+
+
+    @media (max-width: $desktop-breakpoint) {
+      margin-left: -5px;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}
+
+.logo--menu {
+  @media (max-width: $desktop-breakpoint) {
+    & svg {
+      fill: $logo-color-menu;
+      stroke: $logo-color-menu;
+    }
+  }
+}

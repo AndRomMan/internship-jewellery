@@ -121,10 +121,12 @@
 
 .slider__button:focus {
   outline: 1px solid $slider-btns-outline;
+  outline-offset: 4px;
 }
 
 .slider__button:hover {
   outline: 1px solid $slider-btns-outline;
+  outline-offset: 4px;
 }
 
 // custom .swiper-pagination
@@ -138,7 +140,7 @@
   text-align: center;
 
   @media (max-width: $desktop-breakpoint) {
-    bottom: 70px;
+    bottom: 50px;
   }
 
   @media (max-width: $tablet-breakpoint) {
@@ -156,10 +158,11 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  // opacity: 1;
-  // @include font_poppins(16px, 21px, 500, $font-dark-grey);
+  opacity: 1;
 
-  @include font_poppins(16px, 21px, 500, $font-dark);
+  @include font_poppins(16px, 21px, 500, $font-dark-grey);
+
+  // @include font_poppins(16px, 21px, 500, $font-dark);
 
   @media (max-width: $desktop-breakpoint) {
     min-width: 23px;
@@ -167,12 +170,15 @@
 }
 
 .swiper-pagination-bullet-active {
+  color: $font-dark;
+
   border-radius: 0;
 }
 
 .swiper-pagination-bullet:hover,
 .swiper-pagination-bullet:focus {
   outline: 1px solid $slider-btns-outline;
+  outline-offset: -2px;
 }
 
 
@@ -190,5 +196,13 @@
     display: block;
 
     text-align: center;
+
+    @media (max-width: $desktop-breakpoint) {
+      //
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      bottom: 30px;
+    }
   }
 }

@@ -1,5 +1,56 @@
 'use strict';
 
+(function () {
+  var accordionBlock = document.querySelector('.faq-list');
+  var ACCORDION_TOGGLE_CLASS = 'faq-list__btn';
+  var ACCORDION_ANSWER_CLASS = 'faq-list__answer';
+  var ACCORDION_QUESTION_CLASS = 'faq-list__question';
+  var CLOSED_ANSWER_CLASS = 'faq-list__answer--closed';
+  var CLOSED_QUESTION_CLASS = 'faq-list__question--closed';
+
+  function iniAccordion(quesions, answers, toggles) {
+    if (quesions) {
+      quesions.forEach(function (elem) {
+        elem.classList.toggle(CLOSED_QUESTION_CLASS);
+      });
+    }
+
+    if (answers) {
+      answers.forEach(function (elem) {
+        elem.classList.toggle(CLOSED_ANSWER_CLASS);
+      });
+    }
+
+    if (toggles) {
+      toggles.forEach(function (elem) {
+        elem.addEventListener('click', toggleClickHandler);
+      });
+    }
+  }
+
+  function toggleClickHandler() {
+    var questionNode = this.parentNode;
+    questionNode.classList.toggle(CLOSED_QUESTION_CLASS);
+    var answerNode = questionNode.nextElementSibling;
+    answerNode.classList.toggle(CLOSED_ANSWER_CLASS);
+    var currentQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
+    currentQuestions.forEach(function (element) {
+      if (questionNode === element) {
+        return;
+      } else if (!element.classList.contains(CLOSED_QUESTION_CLASS)) {
+        element.classList.toggle(CLOSED_QUESTION_CLASS);
+        element.nextElementSibling.classList.toggle(CLOSED_ANSWER_CLASS);
+      }
+    });
+  }
+
+  var accordionQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
+  var accordionAnswers = accordionBlock.querySelectorAll('.' + ACCORDION_ANSWER_CLASS);
+  var accordionToggles = accordionBlock.querySelectorAll('.' + ACCORDION_TOGGLE_CLASS);
+  iniAccordion(accordionQuestions, accordionAnswers, accordionToggles);
+})();
+'use strict';
+
 (function () {})();
 'use strict';
 

@@ -21,6 +21,7 @@ $mobile-min-width: 320px;
 $tablet-breakpoint: 767px;
 $desktop-breakpoint: 1023px;
 $desktop-max-width: 1170px;
+
 // --------------------------
 $navbar-max-width: 650px;
 $header-element-width: 100%;
@@ -52,6 +53,8 @@ $socials-icon-color: $basic-light;
 $slider-icon: $fade-sienna;
 // $slider-btns-outline: $dark-1d;
 $slider-btns-outline: $fade-sienna;
+$accordion-icon: $fade-sienna;
+
 // -------------------------- fonts
 
 $font-basic-dark: $basic-dark;
@@ -72,11 +75,12 @@ $search-form-menu-back: rgba($basic-light, 0.15);
 $footer-back: $basic-dark;
 $signup-form-back: transparent;
 $promo-back: rgba($dark-brown, 0.7);
+$blog-item-back: $light-grey;
 
 // -------------------------- border colors
 $header-border: $extra-light-grey;
 $signup-form-border: $basic-light;
-
+$faq-list-border: $fade-sienna;
 // -------------------------- shadow colors
 $promo-shadow: rgba($basic-dark, 0.25);
 

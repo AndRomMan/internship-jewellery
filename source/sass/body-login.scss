@@ -10,13 +10,14 @@
 }
 
 .body-login .login {
-  position: static;
+  position: relative;
+  top: 100px;
 
   @media (max-width: $desktop-breakpoint) {
-    top: 420px;
+    // top: 420px;
   }
 
   @media (max-width: $tablet-breakpoint) {
-    top: 350px;
+    // top: 350px;
   }
 }

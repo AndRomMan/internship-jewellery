@@ -88,7 +88,10 @@ $promo-shadow: rgba($basic-dark, 0.25);
 // -------------------------- effects
 $link-underline: $fade-sienna;
 $link-underline-shift: 3px;
-
+$hover-outline: $fade-sienna;
+$hover-outline-light: $basic-light;
+$hover-outline-offset: 4px;
+$header-element-active-opacity: 0.6;
 // .button:hover,
 // .button:focus,
 // .button:active

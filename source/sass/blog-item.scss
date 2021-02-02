@@ -139,3 +139,14 @@
     height: 256px;
   }
 }
+
+.blog-item a[href]:hover,
+.blog-item a[href]:focus, {
+  outline: 2px solid $hover-outline;
+  outline-offset: $hover-outline-offset;
+}
+
+
+.blog-item a[href]:active, {
+  opacity: $header-element-active-opacity;
+}

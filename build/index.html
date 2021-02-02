@@ -7,21 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
 
-    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
@@ -64,7 +58,7 @@
             <a class="user-link__item cart-link cart-link--menu" href="#">
               <div>
                 Cart&nbsp;
-                <span class="cart-link--counter">0</span>
+                <span class="cart-link__counter">0</span>
               </div>
 
               <svg width="20" height="18" role="img">
@@ -116,15 +110,12 @@
       <section class="promo">
         <div class="promo__img-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)"
-                    srcset="img/main-promo_desk@1x.webp 1x, img/main-promo_desk@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/main-promo_tab@1x.webp 1x, img/main-promo_tab@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/main-promo_desk@1x.webp 1x, img/main-promo_desk@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/main-promo_tab@1x.webp 1x, img/main-promo_tab@2x.webp 2x">
             <source type="image/webp" srcset="img/main-promo_mob@1x.webp 1x, img/main-promo_mob@2x.webp 2x">
 
             <!-- 1х: 1366px; 2x: 2732px -->
-            <img src="img/main-promo_desk@1x.jpg" srcset="img/main-promo_desk@2x.jpg 2x" width="1366" height="463"
-                 alt="The lady and her jewelry around her neck and arms.">
+            <img src="img/main-promo_desk@1x.jpg" srcset="img/main-promo_desk@2x.jpg 2x" width="1366" height="463" alt="The lady with jewellery around her neck and arms.">
           </picture>
         </div>
 
@@ -153,17 +144,12 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/purple-gemstone-necklace_desk@1x.webp 1x, img/purple-gemstone-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/purple-gemstone-necklace_tab@1x.webp 1x, img/purple-gemstone-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/purple-gemstone-necklace_mob@1x.webp 1x, img/purple-gemstone-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace_desk@1x.webp 1x, img/purple-gemstone-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/purple-gemstone-necklace_tab@1x.webp 1x, img/purple-gemstone-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/purple-gemstone-necklace_mob@1x.webp 1x, img/purple-gemstone-necklace_mob@2x.webp 2x">
 
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/purple-gemstone-necklace_tab@1x.jpg"
-                           srcset="img/purple-gemstone-necklace_tab@2x.jpg 2x" width="270" height="284"
-                           alt="The new Jewellery collection">
+                      <img src="img/purple-gemstone-necklace_tab@1x.jpg" srcset="img/purple-gemstone-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Necklace with amethyst</h3>
                     <p class="slider__price">
@@ -176,17 +162,12 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/layered-choker-necklace_desk@1x.webp 1x, img/layered-choker-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/layered-choker-necklace_tab@1x.webp 1x, img/layered-choker-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/layered-choker-necklace_mob@1x.webp 1x, img/layered-choker-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/layered-choker-necklace_desk@1x.webp 1x, img/layered-choker-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/layered-choker-necklace_tab@1x.webp 1x, img/layered-choker-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/layered-choker-necklace_mob@1x.webp 1x, img/layered-choker-necklace_mob@2x.webp 2x">
 
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/layered-choker-necklace_tab@1x.jpg"
-                           srcset="img/layered-choker-necklace_tab@2x.jpg 2x" width="270" height="284"
-                           alt="The new Jewellery collection">
+                      <img src="img/layered-choker-necklace_tab@1x.jpg" srcset="img/layered-choker-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Layered сhoker</h3>
                     <p class="slider__price">
@@ -199,15 +180,11 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/dainty-gold-necklace_desk@1x.webp 1x, img/dainty-gold-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/dainty-gold-necklace_tab@1x.webp 1x, img/dainty-gold-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/dainty-gold-necklace_mob@1x.webp 1x, img/dainty-gold-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/dainty-gold-necklace_desk@1x.webp 1x, img/dainty-gold-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/dainty-gold-necklace_tab@1x.webp 1x, img/dainty-gold-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/dainty-gold-necklace_mob@1x.webp 1x, img/dainty-gold-necklace_mob@2x.webp 2x">
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/dainty-gold-necklace_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x"
-                           width="270" height="284" alt="The new Jewellery collection">
+                      <img src="img/dainty-gold-necklace_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Gold chain</h3>
                     <p class="slider__price">
@@ -220,15 +197,11 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/galaxy-earrings_desk@1x.webp 1x, img/galaxy-earrings_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/galaxy-earrings_tab@1x.webp 1x, img/galaxy-earrings_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/galaxy-earrings_mob@1x.webp 1x, img/galaxy-earrings_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings_desk@1x.webp 1x, img/galaxy-earrings_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/galaxy-earrings_tab@1x.webp 1x, img/galaxy-earrings_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/galaxy-earrings_mob@1x.webp 1x, img/galaxy-earrings_mob@2x.webp 2x">
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/galaxy-earrings_tab@1x.jpg" srcset="img/galaxy-earrings_tab@2x.jpg 2x" width="270"
-                           height="284" alt="The new Jewellery collection">
+                      <img src="img/galaxy-earrings_tab@1x.jpg" srcset="img/galaxy-earrings_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Galaxy earrings</h3>
                     <p class="slider__price">
@@ -241,17 +214,12 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/purple-gemstone-necklace_desk@1x.webp 1x, img/purple-gemstone-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/purple-gemstone-necklace_tab@1x.webp 1x, img/purple-gemstone-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/purple-gemstone-necklace_mob@1x.webp 1x, img/purple-gemstone-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace_desk@1x.webp 1x, img/purple-gemstone-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/purple-gemstone-necklace_tab@1x.webp 1x, img/purple-gemstone-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/purple-gemstone-necklace_mob@1x.webp 1x, img/purple-gemstone-necklace_mob@2x.webp 2x">
 
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/purple-gemstone-necklace_tab@1x.jpg"
-                           srcset="img/purple-gemstone-necklace_tab@2x.jpg 2x" width="270" height="284"
-                           alt="The new Jewellery collection">
+                      <img src="img/purple-gemstone-necklace_tab@1x.jpg" srcset="img/purple-gemstone-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Necklace with amethyst</h3>
                     <p class="slider__price">
@@ -264,17 +232,12 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/layered-choker-necklace_desk@1x.webp 1x, img/layered-choker-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/layered-choker-necklace_tab@1x.webp 1x, img/layered-choker-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/layered-choker-necklace_mob@1x.webp 1x, img/layered-choker-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/layered-choker-necklace_desk@1x.webp 1x, img/layered-choker-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/layered-choker-necklace_tab@1x.webp 1x, img/layered-choker-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/layered-choker-necklace_mob@1x.webp 1x, img/layered-choker-necklace_mob@2x.webp 2x">
 
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/layered-choker-necklace_tab@1x.jpg"
-                           srcset="img/layered-choker-necklace_tab@2x.jpg 2x" width="270" height="284"
-                           alt="The new Jewellery collection">
+                      <img src="img/layered-choker-necklace_tab@1x.jpg" srcset="img/layered-choker-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Layered сhoker</h3>
                     <p class="slider__price">
@@ -287,15 +250,11 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/dainty-gold-necklace_desk@1x.webp 1x, img/dainty-gold-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/dainty-gold-necklace_tab@1x.webp 1x, img/dainty-gold-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/dainty-gold-necklace_mob@1x.webp 1x, img/dainty-gold-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/dainty-gold-necklace_desk@1x.webp 1x, img/dainty-gold-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/dainty-gold-necklace_tab@1x.webp 1x, img/dainty-gold-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/dainty-gold-necklace_mob@1x.webp 1x, img/dainty-gold-necklace_mob@2x.webp 2x">
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/dainty-gold-necklace_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x"
-                           width="270" height="284" alt="The new Jewellery collection">
+                      <img src="img/dainty-gold-necklace_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Gold chain</h3>
                     <p class="slider__price">
@@ -308,15 +267,11 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/galaxy-earrings_desk@1x.webp 1x, img/galaxy-earrings_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/galaxy-earrings_tab@1x.webp 1x, img/galaxy-earrings_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/galaxy-earrings_mob@1x.webp 1x, img/galaxy-earrings_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings_desk@1x.webp 1x, img/galaxy-earrings_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/galaxy-earrings_tab@1x.webp 1x, img/galaxy-earrings_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/galaxy-earrings_mob@1x.webp 1x, img/galaxy-earrings_mob@2x.webp 2x">
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/galaxy-earrings_tab@1x.jpg" srcset="img/galaxy-earrings_tab@2x.jpg 2x" width="270"
-                           height="284" alt="The new Jewellery collection">
+                      <img src="img/galaxy-earrings_tab@1x.jpg" srcset="img/galaxy-earrings_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Galaxy earrings</h3>
                     <p class="slider__price">
@@ -329,17 +284,12 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/purple-gemstone-necklace_desk@1x.webp 1x, img/purple-gemstone-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/purple-gemstone-necklace_tab@1x.webp 1x, img/purple-gemstone-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/purple-gemstone-necklace_mob@1x.webp 1x, img/purple-gemstone-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace_desk@1x.webp 1x, img/purple-gemstone-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/purple-gemstone-necklace_tab@1x.webp 1x, img/purple-gemstone-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/purple-gemstone-necklace_mob@1x.webp 1x, img/purple-gemstone-necklace_mob@2x.webp 2x">
 
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/purple-gemstone-necklace_tab@1x.jpg"
-                           srcset="img/purple-gemstone-necklace_tab@2x.jpg 2x" width="270" height="284"
-                           alt="The new Jewellery collection">
+                      <img src="img/purple-gemstone-necklace_tab@1x.jpg" srcset="img/purple-gemstone-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Necklace with amethyst</h3>
                     <p class="slider__price">
@@ -352,17 +302,12 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/layered-choker-necklace_desk@1x.webp 1x, img/layered-choker-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/layered-choker-necklace_tab@1x.webp 1x, img/layered-choker-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/layered-choker-necklace_mob@1x.webp 1x, img/layered-choker-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/layered-choker-necklace_desk@1x.webp 1x, img/layered-choker-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/layered-choker-necklace_tab@1x.webp 1x, img/layered-choker-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/layered-choker-necklace_mob@1x.webp 1x, img/layered-choker-necklace_mob@2x.webp 2x">
 
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/layered-choker-necklace_tab@1x.jpg"
-                           srcset="img/layered-choker-necklace_tab@2x.jpg 2x" width="270" height="284"
-                           alt="The new Jewellery collection">
+                      <img src="img/layered-choker-necklace_tab@1x.jpg" srcset="img/layered-choker-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Layered сhoker</h3>
                     <p class="slider__price">
@@ -375,15 +320,11 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/dainty-gold-necklace_desk@1x.webp 1x, img/dainty-gold-necklace_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/dainty-gold-necklace_tab@1x.webp 1x, img/dainty-gold-necklace_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/dainty-gold-necklace_mob@1x.webp 1x, img/dainty-gold-necklace_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/dainty-gold-necklace_desk@1x.webp 1x, img/dainty-gold-necklace_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/dainty-gold-necklace_tab@1x.webp 1x, img/dainty-gold-necklace_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/dainty-gold-necklace_mob@1x.webp 1x, img/dainty-gold-necklace_mob@2x.webp 2x">
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/dainty-gold-necklace_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x"
-                           width="270" height="284" alt="The new Jewellery collection">
+                      <img src="img/dainty-gold-necklace_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Gold chain</h3>
                     <p class="slider__price">
@@ -396,15 +337,11 @@
                 <div class="swiper-slide slider__slide">
                   <a href="#" class="slider__item">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/galaxy-earrings_desk@1x.webp 1x, img/galaxy-earrings_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/galaxy-earrings_tab@1x.webp 1x, img/galaxy-earrings_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/galaxy-earrings_mob@1x.webp 1x, img/galaxy-earrings_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/galaxy-earrings_desk@1x.webp 1x, img/galaxy-earrings_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/galaxy-earrings_tab@1x.webp 1x, img/galaxy-earrings_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/galaxy-earrings_mob@1x.webp 1x, img/galaxy-earrings_mob@2x.webp 2x">
                       <!-- 1х: 270px; 2x: 540px -->
-                      <img src="img/galaxy-earrings_tab@1x.jpg" srcset="img/galaxy-earrings_tab@2x.jpg 2x" width="270"
-                           height="284" alt="The new Jewellery collection">
+                      <img src="img/galaxy-earrings_tab@1x.jpg" srcset="img/galaxy-earrings_tab@2x.jpg 2x" width="270" height="284" alt="The new Jewellery collection">
                     </picture>
                     <h3>Galaxy earrings</h3>
                     <p class="slider__price">
@@ -413,25 +350,24 @@
                     </p>
                   </a>
                 </div>
-
               </div>
             </div>
 
-            <div class="slider__pagination"></div>
+            <div class="slider-pagination"></div>
 
-            <div class="slider__mobile">
-              <span class="slider__current">current</span>
+            <div class="slider-mobile-pagination">
+              <span class="slider-mobile-pagination__current">current</span>
               &nbsp;of&nbsp;
-              <span class="slider__total">total</span>
+              <span class="slider-mobile-pagination__total">total</span>
             </div>
 
-            <div class="slider__buttons">
-              <button class="slider__button slider__button--prev" aria-label="Previous">
+            <div class="slider-buttons">
+              <button class="slider-buttons__item slider-buttons__item--prev" aria-label="Previous">
                 <svg width="37" height="17" role="img">
                   <use xlink:href="#arrow-left"></use>
                 </svg>
               </button>
-              <button class="slider__button slider__button--next" aria-label="Next">
+              <button class="slider-buttons__item slider-buttons__item--next" aria-label="Next">
                 <svg width="37" height="17" role="img">
                   <use xlink:href="#arrow-right"></use>
                 </svg>
@@ -466,15 +402,11 @@
                   <div class="blog-item__img">
 
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/jess-harper-sunday_desk@1x.webp 1x, img/jess-harper-sunday_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/jess-harper-sunday_tab@1x.webp 1x, img/jess-harper-sunday_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/jess-harper-sunday_mob@1x.webp 1x, img/jess-harper-sunday_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/jess-harper-sunday_desk@1x.webp 1x, img/jess-harper-sunday_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/jess-harper-sunday_tab@1x.webp 1x, img/jess-harper-sunday_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/jess-harper-sunday_mob@1x.webp 1x, img/jess-harper-sunday_mob@2x.webp 2x">
                       <!-- 1х: 285px; 2x: 570px -->
-                      <img src="img/jess-harper-sunday_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x"
-                           width="285" height="300" alt="The new Jewellery collection">
+                      <img src="img/jess-harper-sunday_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x" width="285" height="300" alt="The new Jewellery collection">
                     </picture>
                   </div>
                 </li>
@@ -489,15 +421,11 @@
                   </div>
                   <div class="blog-item__img">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/alex-holyoake_desk@1x.webp 1x, img/alex-holyoake_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/alex-holyoake_tab@1x.webp 1x, img/alex-holyoake_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/alex-holyoake_mob@1x.webp 1x, img/alex-holyoake_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/alex-holyoake_desk@1x.webp 1x, img/alex-holyoake_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/alex-holyoake_tab@1x.webp 1x, img/alex-holyoake_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/alex-holyoake_mob@1x.webp 1x, img/alex-holyoake_mob@2x.webp 2x">
                       <!-- 1х: 285px; 2x: 570px -->
-                      <img src="img/alex-holyoake_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x"
-                           width="285" height="300" alt="The new Jewellery collection">
+                      <img src="img/alex-holyoake_tab@1x.jpg" srcset="img/dainty-gold-necklace_tab@2x.jpg 2x" width="285" height="300" alt="The new Jewellery collection">
                     </picture>
                   </div>
                 </li>
@@ -516,15 +444,11 @@
 
                   <div class="blog-item__img">
                     <picture>
-                      <source type="image/webp" media="(min-width: 1024px)"
-                              srcset="img/alve-odonnell_desk@1x.webp 1x, img/alve-odonnell_desk@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)"
-                              srcset="img/alve-odonnell_tab@1x.webp 1x, img/alve-odonnell_tab@2x.webp 2x">
-                      <source type="image/webp"
-                              srcset="img/alve-odonnell_mob@1x.webp 1x, img/alve-odonnell_mob@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/alve-odonnell_desk@1x.webp 1x, img/alve-odonnell_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/alve-odonnell_tab@1x.webp 1x, img/alve-odonnell_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/alve-odonnell_mob@1x.webp 1x, img/alve-odonnell_mob@2x.webp 2x">
                       <!-- 1х: 570px; 2x: 1140px -->
-                      <img src="img/alve-odonnell_desk@1x.jpg" srcset="img/dainty-gold-necklace_desk@2x.jpg 2x"
-                           width="570" height="630" alt="The new Jewellery collection">
+                      <img src="img/alve-odonnell_desk@1x.jpg" srcset="img/dainty-gold-necklace_desk@2x.jpg 2x" width="570" height="630" alt="The new Jewellery collection">
                     </picture>
                   </div>
                 </li>
@@ -554,7 +478,7 @@
                   </svg>
                 </button>
               </dt>
-              <dd class="faq-list__answer faq-list__answer--closed">
+              <dd class="faq-list__answer">
                 <div class="faq-list__content">
                   <p>
                     Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
@@ -658,28 +582,22 @@
               <ul class="gallery-content__list">
                 <li class="gallery-content__item">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)"
-                            srcset="img/8_desk@1x.webp 1x, img/8_desk@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                            srcset="img/8_tab@1x.webp 1x, img/8_tab@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/8_desk@1x.webp 1x, img/8_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/8_tab@1x.webp 1x, img/8_tab@2x.webp 2x">
                     <source type="image/webp" srcset="img/8_mob@1x.webp 1x, img/8_mob@2x.webp 2x">
 
                     <!-- 1х: 230px; 2x: 460px -->
-                    <img src="img/8_desk@1x.jpg" srcset="img/8_desk@2x.jpg 2x" width="230" height="230"
-                         alt="Gold earrings.">
+                    <img src="img/8_desk@1x.jpg" srcset="img/8_desk@2x.jpg 2x" width="230" height="230" alt="Gold earrings.">
                   </picture>
                 </li>
                 <li class="gallery-content__item">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)"
-                            srcset="img/1_desk@1x.webp 1x, img/1_desk@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                            srcset="img/1_tab@1x.webp 1x, img/1_tab@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/1_desk@1x.webp 1x, img/1_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/1_tab@1x.webp 1x, img/1_tab@2x.webp 2x">
                     <source type="image/webp" srcset="img/1_mob@1x.webp 1x, img/1_mob@2x.webp 2x">
 
                     <!-- 1х: 230px; 2x: 460px -->
-                    <img src="img/1_desk@1x.jpg" srcset="img/1_desk@2x.jpg 2x" width="230" height="154"
-                         alt="Gold pendants with gems.">
+                    <img src="img/1_desk@1x.jpg" srcset="img/1_desk@2x.jpg 2x" width="230" height="154" alt="Gold pendants with gems.">
                   </picture>
                 </li>
               </ul>
@@ -688,15 +606,12 @@
               <ul class="gallery-content__list">
                 <li class="gallery-content__item">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)"
-                            srcset="img/2_desk@1x.webp 1x, img/2_desk@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                            srcset="img/2_tab@1x.webp 1x, img/2_tab@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/2_desk@1x.webp 1x, img/2_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/2_tab@1x.webp 1x, img/2_tab@2x.webp 2x">
                     <source type="image/webp" srcset="img/2_mob@1x.webp 1x, img/2_mob@2x.webp 2x">
 
                     <!-- 1х: 400px; 2x: 800px -->
-                    <img src="img/2_desk@1x.jpg" srcset="img/2_desk@2x.jpg 2x" width="400" height="414"
-                         alt="The lady with earrings.">
+                    <img src="img/2_desk@1x.jpg" srcset="img/2_desk@2x.jpg 2x" width="400" height="414" alt="The lady with earrings.">
                   </picture>
                 </li>
               </ul>
@@ -705,29 +620,23 @@
               <ul class="gallery-content__list">
                 <li class="gallery-content__item">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)"
-                            srcset="img/4_desk@1x.webp 1x, img/4_desk@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                            srcset="img/4_tab@1x.webp 1x, img/4_tab@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/4_desk@1x.webp 1x, img/4_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/4_tab@1x.webp 1x, img/4_tab@2x.webp 2x">
                     <source type="image/webp" srcset="img/4_mob@1x.webp 1x, img/4_mob@2x.webp 2x">
 
                     <!-- 1х: 232px; 2x: 464px -->
-                    <img src="img/4_desk@1x.jpg" srcset="img/4_desk@2x.jpg 2x" width="232" height="193"
-                         alt="A lady with a gold bracelet and a ring.">
+                    <img src="img/4_desk@1x.jpg" srcset="img/4_desk@2x.jpg 2x" width="232" height="193" alt="A lady with a gold bracelet and a ring.">
                   </picture>
                 </li>
 
                 <li class="gallery-content__item">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)"
-                            srcset="img/5_desk@1x.webp 1x, img/5_desk@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                            srcset="img/5_tab@1x.webp 1x, img/5_tab@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/5_desk@1x.webp 1x, img/5_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/5_tab@1x.webp 1x, img/5_tab@2x.webp 2x">
                     <source type="image/webp" srcset="img/5_mob@1x.webp 1x, img/5_mob@2x.webp 2x">
 
                     <!-- 1х: 218px; 2x: 436px -->
-                    <img src="img/5_desk@1x.jpg" srcset="img/5_desk@2x.jpg 2x" width="218" height="463"
-                         alt="The gold set for young ladies.">
+                    <img src="img/5_desk@1x.jpg" srcset="img/5_desk@2x.jpg 2x" width="218" height="463" alt="The gold set for young ladies.">
                   </picture>
                 </li>
               </ul>
@@ -736,28 +645,22 @@
               <ul class="gallery-content__list">
                 <li class="gallery-content__item">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)"
-                            srcset="img/6_desk@1x.webp 1x, img/6_desk@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                            srcset="img/6_tab@1x.webp 1x, img/6_tab@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/6_desk@1x.webp 1x, img/6_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/6_tab@1x.webp 1x, img/6_tab@2x.webp 2x">
                     <!-- <source type="image/webp" srcset="img/6_mob@1x.webp 1x, img/6_mob@2x.webp 2x"> -->
 
                     <!-- 1х: 218px; 2x: 436px -->
-                    <img src="img/6_desk@1x.jpg" srcset="img/6_desk@2x.jpg 2x" width="218" height="218"
-                         alt="Thin gold rings">
+                    <img src="img/6_desk@1x.jpg" srcset="img/6_desk@2x.jpg 2x" width="218" height="218" alt="Thin gold rings">
                   </picture>
                 </li>
                 <li class="gallery-content__item">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1024px)"
-                            srcset="img/7_desk@1x.webp 1x, img/7_desk@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)"
-                            srcset="img/7_tab@1x.webp 1x, img/7_tab@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1024px)" srcset="img/7_desk@1x.webp 1x, img/7_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/7_tab@1x.webp 1x, img/7_tab@2x.webp 2x">
                     <!-- <source type="image/webp" srcset="img/7_mob@1x.webp 1x, img/7_mob@2x.webp 2x"> -->
 
                     <!-- 1х: 232px; 2x: 464px -->
-                    <img src="img/7_desk@1x.jpg" srcset="img/7_desk@2x.jpg 2x" width="232" height="166"
-                         alt="Beautiful lady's hands with fancy rings.">
+                    <img src="img/7_desk@1x.jpg" srcset="img/7_desk@2x.jpg 2x" width="232" height="166" alt="Beautiful lady's hands with fancy rings.">
                   </picture>
                 </li>
               </ul>
@@ -792,6 +695,7 @@
         </section>
 
         <section class="terms">
+          <h2 class="visually-hidden">Terms, Conditions and About Jewellery Shop</h2>
           <ul class="terms__list">
             <li class="terms__item">
               <a href="#">Ordering&nbsp;&#38;&nbsp;Payment</a>
@@ -872,15 +776,12 @@
       <div class="login">
         <div class="login__img">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)"
-                    srcset="img/sweet-ice-cream_desk@1x.webp 1x, img/sweet-ice-cream_desk@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/sweet-ice-cream_tab@1x.webp 1x, img/sweet-ice-cream_tab@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/sweet-ice-cream_desk@1x.webp 1x, img/sweet-ice-cream_desk@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/sweet-ice-cream_tab@1x.webp 1x, img/sweet-ice-cream_tab@2x.webp 2x">
             <source type="image/webp" srcset="img/sweet-ice-cream_mob@1x.webp 1x, img/sweet-ice-cream_mob@2x.webp 2x">
 
             <!-- 1х: 430px; 2x: 560px -->
-            <img src="img/sweet-ice-cream_desk@1x.jpg" srcset="img/sweet-ice-cream_desk@2x.jpg 2x" width="430"
-                 height="138" alt="New jewellery collection.">
+            <img src="img/sweet-ice-cream_desk@1x.jpg" srcset="img/sweet-ice-cream_desk@2x.jpg 2x" width="430" height="138" alt="New jewellery collection.">
           </picture>
         </div>
 
@@ -889,12 +790,10 @@
           <form class="login__form" action="#" method="post">
 
             <label for="useremail">
-              <input type="email" id="useremail" name="useremail" placeholder="Your E-mail"
-                     aria-label="Input your e-mail" required>
+              <input type="email" id="useremail" name="useremail" placeholder="Your E-mail" aria-label="Input your e-mail" required>
             </label>
 
-            <input type="password" id="userpassword" name="userpassword" placeholder="Password"
-                   aria-label="Input your password" required>
+            <input type="password" id="userpassword" name="userpassword" placeholder="Password" aria-label="Input your password" required>
 
             <label class="login__password-label" for="userpassword">
               <a class="login__restore-link" href="#">Forgot your password?</a>

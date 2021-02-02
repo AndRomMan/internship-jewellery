@@ -7,21 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
 
-    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
-    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2"
-          crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
@@ -37,7 +31,7 @@
     <header class="header header--menu">
       <div class=" container">
         <div class="header__wrapper">
-          <a class="header__logo logo logo--menu">
+          <a href="index.html" class="header__logo logo logo--menu">
             <svg width="66" height="66" role="img">
               <use xlink:href="#logo"></use>
             </svg>
@@ -53,15 +47,12 @@
       <div class="login">
         <div class="login__img">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)"
-                    srcset="img/sweet-ice-cream_desk@1x.webp 1x, img/sweet-ice-cream_desk@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/sweet-ice-cream_tab@1x.webp 1x, img/sweet-ice-cream_tab@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/sweet-ice-cream_desk@1x.webp 1x, img/sweet-ice-cream_desk@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/sweet-ice-cream_tab@1x.webp 1x, img/sweet-ice-cream_tab@2x.webp 2x">
             <source type="image/webp" srcset="img/sweet-ice-cream_mob@1x.webp 1x, img/sweet-ice-cream_mob@2x.webp 2x">
 
             <!-- 1х: 430px; 2x: 560px -->
-            <img src="img/sweet-ice-cream_desk@1x.jpg" srcset="img/sweet-ice-cream_desk@2x.jpg 2x" width="430"
-                 height="138" alt="New jewellery collection.">
+            <img src="img/sweet-ice-cream_desk@1x.jpg" srcset="img/sweet-ice-cream_desk@2x.jpg 2x" width="430" height="138" alt="New jewellery collection.">
           </picture>
         </div>
 
@@ -70,12 +61,10 @@
           <form class="login__form" action="#" method="post">
 
             <label for="useremail">
-              <input type="email" id="useremail" name="useremail" placeholder="Your E-mail"
-                     aria-label="Input your e-mail" required>
+              <input type="email" id="useremail" name="useremail" placeholder="Your E-mail" aria-label="Input your e-mail" required>
             </label>
 
-            <input type="password" id="userpassword" name="userpassword" placeholder="Password"
-                   aria-label="Input your password" required>
+            <input type="password" id="userpassword" name="userpassword" placeholder="Password" aria-label="Input your password" required>
 
             <label class="login__password-label" for="userpassword">
               <a class="login__restore-link" href="#">Forgot your password?</a>
@@ -87,12 +76,6 @@
           <a class="login__signup-link" href="#"> Don’t have an account?<span>&nbsp;&nbsp;Sign up</span>
           </a>
         </div>
-
-        <button type="button" class="login__close" aria-label="Закрыть модальное окно">
-          <svg width="14" height="14" role="img">
-            <use xlink:href="#close"></use>
-          </svg>
-        </button>
       </div>
     </main>
     <script src="js/main.js"></script>

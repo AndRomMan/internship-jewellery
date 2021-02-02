@@ -3,6 +3,8 @@
   top: 50%;
   left: 50%;
 
+  width: 430px;
+
   background-color: $login-back;
   transform: translate(-50%, -50%);
 
@@ -165,4 +167,24 @@
     width: 14px;
     height: 14px;
   }
+}
+
+.login button:hover,
+.login button:focus,
+.login input:hover,
+.login input:focus {
+  outline: 2px solid $hover-outline;
+  outline-offset: 0.5 * $hover-outline-offset;
+}
+
+.login button:active,
+.login input:active,
+.login a[href]:active, {
+  opacity: $header-element-active-opacity;
+}
+
+.login a[href]:hover,
+.login a[href]:focus, {
+  outline: 2px solid $hover-outline;
+  outline-offset: 0;
 }

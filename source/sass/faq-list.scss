@@ -68,10 +68,6 @@
     width: 23px;
     height: 12px;
   }
-
-  @media (max-width: $tablet-breakpoint) {
-    //
-  }
 }
 
 .faq-list__answer {
@@ -135,4 +131,19 @@
 
 .faq-list__answer--closed .faq-list__content {
   display: none;
+}
+
+.faq-list button:hover,
+.faq-list button:focus {
+  & .faq-list__icon {
+    outline: 2px solid $hover-outline;
+    outline-offset: 3 * $hover-outline-offset;
+  }
+}
+
+.faq-list button:active,
+.faq-list input:active {
+  & .faq-list__icon {
+    opacity: $header-element-active-opacity;
+  }
 }

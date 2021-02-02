@@ -4,9 +4,9 @@
   let swiper;
 
   let sliderContainer = document.querySelector('.swiper-container');
-  let paginationBlock = document.querySelector('.slider__pagination');
-  let currentDotOut = document.querySelector('.slider__current');
-  let totalDotsOut = document.querySelector('.slider__total');
+  let paginationBlock = document.querySelector('.slider-pagination');
+  let currentDotOut = document.querySelector('.slider-mobile-pagination__current');
+  let totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
 
   const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
   const BREAKPOINT_MOBILE = 767;
@@ -21,7 +21,7 @@
       centeredSlidesBounds: true,
 
       pagination: {
-        el: document.querySelector('.slider__pagination'),
+        el: document.querySelector('.slider-pagination'),
         clickable: 'true',
         renderBullet(index, className) {
           return '<span class="' + className + '">' + (index + 1) + '</span>';
@@ -29,8 +29,8 @@
       },
 
       navigation: {
-        nextEl: '.slider__button--next',
-        prevEl: '.slider__button--prev',
+        nextEl: '.slider-buttons__item--next',
+        prevEl: '.slider-buttons__item--prev',
       },
 
       breakpoints: {

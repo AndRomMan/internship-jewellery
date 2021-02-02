@@ -1,4 +1,6 @@
 .body-login {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,14 +12,9 @@
 }
 
 .body-login .login {
-  position: relative;
-  top: 100px;
-
-  @media (max-width: $desktop-breakpoint) {
-    // top: 420px;
-  }
+  top: 430px;
 
   @media (max-width: $tablet-breakpoint) {
-    // top: 350px;
+    top: 330px;
   }
 }

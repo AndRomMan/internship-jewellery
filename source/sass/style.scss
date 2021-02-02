@@ -2,7 +2,6 @@
 @import "vendor/swiper-vars";
 @import "vendor/swiper";
 @import "vendor/pagination";
-@import "vendor/navigation";
 @import "base-normalize";
 @import "variables";
 @import "fonts";
@@ -23,6 +22,9 @@
 @import "section-head";
 @import "novelties";
 @import "slider";
+@import "slider-pagination";
+@import "slider-mobile-pagination";
+@import "slider-buttons";
 @import "blog";
 @import "blog-list";
 @import "blog-item";
@@ -38,8 +40,3 @@
 @import "login";
 // login.html
 @import "body-login";
-
-// FIXME del tech.scss temp.scss
-// @import "tech";
-// @import "temp";
-// @import "temp-svg";

@@ -50,9 +50,13 @@
     });
   }
 
-  let accordionQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
-  let accordionAnswers = accordionBlock.querySelectorAll('.' + ACCORDION_ANSWER_CLASS);
-  let accordionToggles = accordionBlock.querySelectorAll('.' + ACCORDION_TOGGLE_CLASS);
+  if (accordionBlock) {
+    let accordionQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
 
-  iniAccordion(accordionQuestions, accordionAnswers, accordionToggles);
+    let accordionAnswers = accordionBlock.querySelectorAll('.' + ACCORDION_ANSWER_CLASS);
+
+    let accordionToggles = accordionBlock.querySelectorAll('.' + ACCORDION_TOGGLE_CLASS);
+
+    iniAccordion(accordionQuestions, accordionAnswers, accordionToggles);
+  }
 })();

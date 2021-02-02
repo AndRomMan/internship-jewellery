@@ -44,10 +44,30 @@
     });
   }
 
-  var accordionQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
-  var accordionAnswers = accordionBlock.querySelectorAll('.' + ACCORDION_ANSWER_CLASS);
-  var accordionToggles = accordionBlock.querySelectorAll('.' + ACCORDION_TOGGLE_CLASS);
-  iniAccordion(accordionQuestions, accordionAnswers, accordionToggles);
+  if (accordionBlock) {
+    var accordionQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
+    var accordionAnswers = accordionBlock.querySelectorAll('.' + ACCORDION_ANSWER_CLASS);
+    var accordionToggles = accordionBlock.querySelectorAll('.' + ACCORDION_TOGGLE_CLASS);
+    iniAccordion(accordionQuestions, accordionAnswers, accordionToggles);
+  }
+})();
+'use strict';
+
+(function () {
+  var loginUserEmail = document.querySelector('#useremail');
+  var USER_EMAIL_KEY = 'usermale';
+
+  function inputLoginEmailBlurHandler() {
+    localStorage.setItem(USER_EMAIL_KEY, loginUserEmail.value);
+  }
+
+  function iniLoginEmailLocalStorage() {
+    if (loginUserEmail) {
+      loginUserEmail.addEventListener('blur', inputLoginEmailBlurHandler);
+    }
+  }
+
+  iniLoginEmailLocalStorage();
 })();
 'use strict';
 
@@ -134,44 +154,195 @@
 'use strict';
 
 (function () {
+  var pageBody = document.querySelector('body');
+  var modal = document.querySelector('.modal');
+  var loginLinks = document.querySelectorAll('.login-link-js');
+  var closeLoginFormBtn = document.querySelector('.login__close');
+  var activeElements = [];
+  var maxTabIndexNum;
+  var inputFocused = document.querySelector('#useremail');
+  var BODY_OVERFLOW = 'body--overflow';
+  var MODAL_OPENED = 'modal--opened';
+  var MODAL_OVERLAY = 'modal';
+
+  function findModalElements() {
+    var elements = modal.querySelectorAll('*');
+    setActiveElementArray(elements);
+  }
+
+  function setActiveElementArray(elements) {
+    elements.forEach(function (element) {
+      var tag = element.tagName;
+
+      if (tag === 'A' || tag === 'INPUT' || tag === 'BUTTON' || tag === 'TEXTAREA') {
+        activeElements.push(element);
+      }
+    });
+  }
+
+  function setTabindexActiveElements() {
+    maxTabIndexNum = activeElements.length;
+
+    for (var i = 0; i < activeElements.length; i++) {
+      activeElements[i].setAttribute('tabindex', '' + (i + 1));
+      activeElements[i].addEventListener('blur', activeElementBlurHandler);
+    }
+  }
+
+  function activeElementBlurHandler(evt) {
+    var currentTabIndex = evt.target.getAttribute('tabindex');
+
+    if (+currentTabIndex === maxTabIndexNum) {
+      activeElements[0].focus();
+    }
+  }
+
+  function setModalActiveElements() {
+    findModalElements();
+    setTabindexActiveElements();
+  }
+
+  function resetTabindexActiveElements() {
+    activeElements.forEach(function (element) {
+      element.removeEventListener('blur', activeElementBlurHandler);
+    });
+  }
+
+  iniModalToggles();
+
+  function iniModalToggles() {
+    if (loginLinks) {
+      setModalTogglesClickHandler(loginLinks);
+    }
+  }
+
+  function setModalTogglesClickHandler(array) {
+    if (array) {
+      array.forEach(function (element) {
+        element.addEventListener('click', toggleClickHandler);
+      });
+    }
+  }
+
+  function toggleClickHandler(evt) {
+    evt.preventDefault();
+    setModalActiveState();
+  }
+
+  function setModalActiveState() {
+    if (modal) {
+      modal.classList.toggle(MODAL_OPENED);
+      pageBody.classList.toggle(BODY_OVERFLOW);
+      inputFocused.focus();
+    }
+
+    window.addEventListener('keydown', escapeHAndler);
+
+    if (closeLoginFormBtn) {
+      closeLoginFormBtn.addEventListener('click', closeBtnClickHandler);
+    }
+
+    if (modal) {
+      modal.addEventListener('click', overlayClickHandler);
+    }
+
+    setModalActiveElements();
+  }
+
+  function escapeHAndler(evt) {
+    if (evt.code === 'Escape') {
+      evt.preventDefault();
+      setModalInactiveState();
+    }
+  }
+
+  function closeBtnClickHandler() {
+    setModalInactiveState();
+  }
+
+  function overlayClickHandler(evt) {
+    var element = evt.target;
+
+    if (element.classList.contains(MODAL_OVERLAY)) {
+      setModalInactiveState();
+    } else {
+      return;
+    }
+  }
+
+  function setModalInactiveState() {
+    modal.classList.toggle(MODAL_OPENED);
+    pageBody.classList.toggle(BODY_OVERFLOW);
+    window.removeEventListener('keydown', escapeHAndler);
+    closeLoginFormBtn.removeEventListener('click', closeBtnClickHandler);
+    modal.removeEventListener('click', overlayClickHandler);
+    resetTabindexActiveElements();
+  }
+})();
+'use strict';
+
+(function () {
+  var signupUserEmail = document.querySelector('#usermail');
+  var USER_EMAIL_KEY = 'usermale';
+
+  function inputSignupEmailBlurHandler() {
+    localStorage.setItem(USER_EMAIL_KEY, signupUserEmail.value);
+  }
+
+  function iniSignupEmailLocalStorage() {
+    if (signupUserEmail) {
+      signupUserEmail.addEventListener('blur', inputSignupEmailBlurHandler);
+    }
+  }
+
+  iniSignupEmailLocalStorage();
+})();
+'use strict';
+
+(function () {
+  var swiper;
+  var sliderContainer = document.querySelector('.swiper-container');
   var paginationBlock = document.querySelector('.slider__pagination');
   var currentDotOut = document.querySelector('.slider__current');
   var totalDotsOut = document.querySelector('.slider__total');
   var ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
   var BREAKPOINT_MOBILE = 767;
-  var swiper = new window.Swiper('.swiper-container', {
-    loop: true,
-    slidesPerGroup: 2,
-    slidesPerView: 2,
-    centeredSlides: false,
-    spaceBetween: 30,
-    centeredSlidesBounds: true,
-    pagination: {
-      el: document.querySelector('.slider__pagination'),
-      clickable: 'true',
-      renderBullet: function renderBullet(index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
-      }
-    },
-    navigation: {
-      nextEl: '.slider__button--next',
-      prevEl: '.slider__button--prev'
-    },
-    breakpoints: {
-      767: {
-        slidesPerView: 2,
-        slidesPerGroup: 2
+
+  function iniSwiper() {
+    swiper = new window.Swiper('.swiper-container', {
+      loop: true,
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 30,
+      centeredSlidesBounds: true,
+      pagination: {
+        el: document.querySelector('.slider__pagination'),
+        clickable: 'true',
+        renderBullet: function renderBullet(index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
       },
-      1023: {
-        slidesPerView: 3,
-        slidesPerGroup: 3
+      navigation: {
+        nextEl: '.slider__button--next',
+        prevEl: '.slider__button--prev'
       },
-      1169: {
-        slidesPerView: 4,
-        slidesPerGroup: 4
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          slidesPerGroup: 2
+        },
+        1023: {
+          slidesPerView: 3,
+          slidesPerGroup: 3
+        },
+        1169: {
+          slidesPerView: 4,
+          slidesPerGroup: 4
+        }
       }
-    }
-  });
+    });
+  }
 
   function getBullets() {
     var bullets;
@@ -227,10 +398,18 @@
     renderMobilePagination(bullets);
   }
 
-  if (swiper) {
-    iniMobilePagination();
-    breakpointChangeHandler();
-    swiper.on('breakpoint', breakpointChangeHandler);
+  function iniSlider() {
+    if (sliderContainer) {
+      iniSwiper();
+
+      if (swiper) {
+        iniMobilePagination();
+        breakpointChangeHandler();
+        swiper.on('breakpoint', breakpointChangeHandler);
+      }
+    }
   }
+
+  iniSlider();
 })();
 //# sourceMappingURL=main.js.map

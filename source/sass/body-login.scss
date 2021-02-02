@@ -1,0 +1,22 @@
+.body-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.body-login .header__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.body-login .login {
+  position: static;
+
+  @media (max-width: $desktop-breakpoint) {
+    top: 420px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    top: 350px;
+  }
+}

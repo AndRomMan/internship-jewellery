@@ -45,7 +45,6 @@
   }
 }
 
-
 .search-form input {
   width: $search-form-width;
   padding: 12px 10px 12px 28px;
@@ -61,22 +60,17 @@
   }
 
   @media (max-width: $desktop-breakpoint) {
+    width: $search-form-tablet-width;
     padding: 10px 40px 10px 40px;
 
     &::placeholder {
       @include font_poppins(14px, 21px, 500, transparent);
     }
   }
-
-  // @media (max-width: $tablet-breakpoint) {
-  //   //
-  // }
 }
 
 .search-form--menu {
   z-index: 3;
 
   display: flex;
-
-  // outline: 3px solid red;
 }

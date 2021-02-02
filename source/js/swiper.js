@@ -1,6 +1,9 @@
 'use strict';
 
 (function () {
+  let swiper;
+
+  let sliderContainer = document.querySelector('.swiper-container');
   let paginationBlock = document.querySelector('.slider__pagination');
   let currentDotOut = document.querySelector('.slider__current');
   let totalDotsOut = document.querySelector('.slider__total');
@@ -8,42 +11,44 @@
   const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
   const BREAKPOINT_MOBILE = 767;
 
-  let swiper = new window.Swiper('.swiper-container', {
-    loop: true,
-    slidesPerGroup: 2,
-    slidesPerView: 2,
-    centeredSlides: false,
-    spaceBetween: 30,
-    centeredSlidesBounds: true,
+  function iniSwiper() {
+    swiper = new window.Swiper('.swiper-container', {
+      loop: true,
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 30,
+      centeredSlidesBounds: true,
 
-    pagination: {
-      el: document.querySelector('.slider__pagination'),
-      clickable: 'true',
-      renderBullet(index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      pagination: {
+        el: document.querySelector('.slider__pagination'),
+        clickable: 'true',
+        renderBullet(index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
       },
-    },
 
-    navigation: {
-      nextEl: '.slider__button--next',
-      prevEl: '.slider__button--prev',
-    },
+      navigation: {
+        nextEl: '.slider__button--next',
+        prevEl: '.slider__button--prev',
+      },
 
-    breakpoints: {
-      767: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        1023: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+        1169: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
       },
-      1023: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
-      1169: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-      },
-    },
-  });
+    });
+  }
 
   function getBullets() {
     let bullets;
@@ -99,9 +104,17 @@
     renderMobilePagination(bullets);
   }
 
-  if (swiper) {
-    iniMobilePagination();
-    breakpointChangeHandler();
-    swiper.on('breakpoint', breakpointChangeHandler);
+  function iniSlider() {
+    if (sliderContainer) {
+      iniSwiper();
+
+      if (swiper) {
+        iniMobilePagination();
+        breakpointChangeHandler();
+        swiper.on('breakpoint', breakpointChangeHandler);
+      }
+    }
   }
+
+  iniSlider();
 })();

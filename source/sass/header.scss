@@ -1,8 +1,4 @@
 .header {
-  // position: relative;
-
-  // display: none;
-
   &::after {
     content: "";
     position: absolute;
@@ -36,7 +32,6 @@
   }
 }
 
-
 .header__link-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -49,10 +44,6 @@
     width: auto;
     margin-top: 0;
   }
-
-  // @media (max-width: $tablet-breakpoint) {
-  //   //
-  // }
 }
 
 .header__search-form {

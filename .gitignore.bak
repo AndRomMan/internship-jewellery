@@ -18,6 +18,7 @@ package-lock.json
 *.pdf
 *.psd
 *.sublime*
+technology/
 node_modules/
 npm-debug.*
 source/css/

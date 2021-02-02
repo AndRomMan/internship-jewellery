@@ -59,7 +59,7 @@
           </a>
 
           <div class="header__link-wrapper user-link">
-            <a class="user-link__item login-link" href="login.html">Login</a>
+            <a class="user-link__item login-link login-link-js" href="login.html" target="_blank">Login</a>
 
             <a class="user-link__item cart-link cart-link--menu" href="#">
               <div>
@@ -103,8 +103,8 @@
             <li class="expanded-nav-list__item">
               <a href="#">Contact Us</a>
             </li>
-            <li class="expanded-nav-list__item expanded-nav-list__item--login">
-              <a href="login.html">Login</a>
+            <li class="expanded-nav-list__item expanded-nav-list__item--login login-link-js">
+              <a href="login.html" target="_blank">Login</a>
             </li>
           </ul>
         </nav>
@@ -545,7 +545,7 @@
 
             <dl class="faq__list faq-list">
               <dt class="faq-list__question">
-                <button class="faq-list__btn 1" type="button">
+                <button class="faq-list__btn" type="button">
                   <span>
                     What materials are the&nbsp;jewellery made of?
                   </span>
@@ -554,7 +554,7 @@
                   </svg>
                 </button>
               </dt>
-              <dd class="faq-list__answer 1">
+              <dd class="faq-list__answer faq-list__answer--closed">
                 <div class="faq-list__content">
                   <p>
                     Our jewellery is made of solid gold, silver or leather. Also, some jewellery contains precious and
@@ -564,7 +564,7 @@
                 </div>
               </dd>
 
-              <dt class="faq-list__question 2">
+              <dt class="faq-list__question">
                 <button class="faq-list__btn" type="button">
                   <span>
                     Which countries do&nbsp;you&nbsp;deliver to?
@@ -574,7 +574,7 @@
                   </svg>
                 </button>
               </dt>
-              <dd class="faq-list__answer 2">
+              <dd class="faq-list__answer">
                 <div class="faq-list__content">
                   <p>
                     We deliver to the following countries:
@@ -590,7 +590,7 @@
                 </div>
               </dd>
 
-              <dt class="faq-list__question 3">
+              <dt class="faq-list__question">
                 <button class="faq-list__btn" type="button">
                   <span>
                     What are the payment&nbsp;methods?
@@ -600,7 +600,7 @@
                   </svg>
                 </button>
               </dt>
-              <dd class="faq-list__answer 3">
+              <dd class="faq-list__answer">
                 <div class="faq-list__content">
                   <ul>
                     <li>Cash.</li>
@@ -613,7 +613,7 @@
                 </div>
               </dd>
 
-              <dt class="faq-list__question 4">
+              <dt class="faq-list__question">
                 <button class="faq-list__btn" type="button">
                   <span>
                     Can I return the jewellery&nbsp;if&nbsp;it didn’t fit me?
@@ -623,7 +623,7 @@
                   </svg>
                 </button>
               </dt>
-              <dd class="faq-list__answer 4">
+              <dd class="faq-list__answer">
                 <div class="faq-list__content">
                   <p>
                     You will need to visit the Jewellery store where the item(s) were purchased in order to receive a
@@ -647,11 +647,120 @@
           <div class="gallery__wrapper">
 
             <div class="gallery__head section-head">
-              <h2>@Chjewellery</h2>
+              <h2>
+                <span>@</span><span>Chjewellery</span>
+              </h2>
               <a href="#">Follow Us</a>
             </div>
 
-            <div class="gallery__content-wrapper">
+            <div class="gallery__content gallery-content">
+              <!-- column 1 -->
+              <ul class="gallery-content__list">
+                <li class="gallery-content__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1024px)"
+                            srcset="img/8_desk@1x.webp 1x, img/8_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/8_tab@1x.webp 1x, img/8_tab@2x.webp 2x">
+                    <source type="image/webp" srcset="img/8_mob@1x.webp 1x, img/8_mob@2x.webp 2x">
+
+                    <!-- 1х: 230px; 2x: 460px -->
+                    <img src="img/8_desk@1x.jpg" srcset="img/8_desk@2x.jpg 2x" width="230" height="230"
+                         alt="Gold earrings.">
+                  </picture>
+                </li>
+                <li class="gallery-content__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1024px)"
+                            srcset="img/1_desk@1x.webp 1x, img/1_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/1_tab@1x.webp 1x, img/1_tab@2x.webp 2x">
+                    <source type="image/webp" srcset="img/1_mob@1x.webp 1x, img/1_mob@2x.webp 2x">
+
+                    <!-- 1х: 230px; 2x: 460px -->
+                    <img src="img/1_desk@1x.jpg" srcset="img/1_desk@2x.jpg 2x" width="230" height="154"
+                         alt="Gold pendants with gems.">
+                  </picture>
+                </li>
+              </ul>
+
+              <!-- column 2 -->
+              <ul class="gallery-content__list">
+                <li class="gallery-content__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1024px)"
+                            srcset="img/2_desk@1x.webp 1x, img/2_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/2_tab@1x.webp 1x, img/2_tab@2x.webp 2x">
+                    <source type="image/webp" srcset="img/2_mob@1x.webp 1x, img/2_mob@2x.webp 2x">
+
+                    <!-- 1х: 400px; 2x: 800px -->
+                    <img src="img/2_desk@1x.jpg" srcset="img/2_desk@2x.jpg 2x" width="400" height="414"
+                         alt="The lady with earrings.">
+                  </picture>
+                </li>
+              </ul>
+
+              <!-- column 3 -->
+              <ul class="gallery-content__list">
+                <li class="gallery-content__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1024px)"
+                            srcset="img/4_desk@1x.webp 1x, img/4_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/4_tab@1x.webp 1x, img/4_tab@2x.webp 2x">
+                    <source type="image/webp" srcset="img/4_mob@1x.webp 1x, img/4_mob@2x.webp 2x">
+
+                    <!-- 1х: 232px; 2x: 464px -->
+                    <img src="img/4_desk@1x.jpg" srcset="img/4_desk@2x.jpg 2x" width="232" height="193"
+                         alt="A lady with a gold bracelet and a ring.">
+                  </picture>
+                </li>
+
+                <li class="gallery-content__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1024px)"
+                            srcset="img/5_desk@1x.webp 1x, img/5_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/5_tab@1x.webp 1x, img/5_tab@2x.webp 2x">
+                    <source type="image/webp" srcset="img/5_mob@1x.webp 1x, img/5_mob@2x.webp 2x">
+
+                    <!-- 1х: 218px; 2x: 436px -->
+                    <img src="img/5_desk@1x.jpg" srcset="img/5_desk@2x.jpg 2x" width="218" height="463"
+                         alt="The gold set for young ladies.">
+                  </picture>
+                </li>
+              </ul>
+
+              <!-- column 4 -->
+              <ul class="gallery-content__list">
+                <li class="gallery-content__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1024px)"
+                            srcset="img/6_desk@1x.webp 1x, img/6_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/6_tab@1x.webp 1x, img/6_tab@2x.webp 2x">
+                    <!-- <source type="image/webp" srcset="img/6_mob@1x.webp 1x, img/6_mob@2x.webp 2x"> -->
+
+                    <!-- 1х: 218px; 2x: 436px -->
+                    <img src="img/6_desk@1x.jpg" srcset="img/6_desk@2x.jpg 2x" width="218" height="218"
+                         alt="Thin gold rings">
+                  </picture>
+                </li>
+                <li class="gallery-content__item">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1024px)"
+                            srcset="img/7_desk@1x.webp 1x, img/7_desk@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                            srcset="img/7_tab@1x.webp 1x, img/7_tab@2x.webp 2x">
+                    <!-- <source type="image/webp" srcset="img/7_mob@1x.webp 1x, img/7_mob@2x.webp 2x"> -->
+
+                    <!-- 1х: 232px; 2x: 464px -->
+                    <img src="img/7_desk@1x.jpg" srcset="img/7_desk@2x.jpg 2x" width="232" height="166"
+                         alt="Beautiful lady's hands with fancy rings.">
+                  </picture>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -673,7 +782,7 @@
             <label for="usermail">
               <input type="email" name="usermail" id="usermail" placeholder="Your E-mail" required>
             </label>
-            <button class="signup__button" type="submit">
+            <button class="signup__btn" type="submit">
               Sign Up
               <svg class="signup__icon" width="37" height="17" role="img">
                 <use xlink:href="#arrow-right"></use>
@@ -759,8 +868,55 @@
       </div>
     </footer>
 
+    <div class="modal">
+      <div class="login">
+        <div class="login__img">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)"
+                    srcset="img/sweet-ice-cream_desk@1x.webp 1x, img/sweet-ice-cream_desk@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/sweet-ice-cream_tab@1x.webp 1x, img/sweet-ice-cream_tab@2x.webp 2x">
+            <source type="image/webp" srcset="img/sweet-ice-cream_mob@1x.webp 1x, img/sweet-ice-cream_mob@2x.webp 2x">
+
+            <!-- 1х: 430px; 2x: 560px -->
+            <img src="img/sweet-ice-cream_desk@1x.jpg" srcset="img/sweet-ice-cream_desk@2x.jpg 2x" width="430"
+                 height="138" alt="New jewellery collection.">
+          </picture>
+        </div>
+
+        <div class="login__form-wrapper">
+          <h2>Log In</h2>
+          <form class="login__form" action="#" method="post">
+
+            <label for="useremail">
+              <input type="email" id="useremail" name="useremail" placeholder="Your E-mail"
+                     aria-label="Input your e-mail" required>
+            </label>
+
+            <input type="password" id="userpassword" name="userpassword" placeholder="Password"
+                   aria-label="Input your password" required>
+
+            <label class="login__password-label" for="userpassword">
+              <a class="login__restore-link" href="#">Forgot your password?</a>
+            </label>
+
+            <button class="login__btn" type="submit">Log In</button>
+          </form>
+
+          <a class="login__signup-link" href="#"> Don’t have an account?<span>&nbsp;&nbsp;Sign up</span>
+          </a>
+        </div>
+
+        <button type="button" class="login__close" aria-label="Закрыть модальное окно">
+          <svg width="14" height="14" role="img">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script>  -->
   </body>
 
 </html>

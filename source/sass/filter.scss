@@ -58,3 +58,17 @@
   //   //
   // }
 }
+
+.filter__submit {
+  background-color: $filter-btn;
+  border: none;
+
+  @include font_poppins(16px, 21px, 500, $font-basic-light);
+}
+
+.filter__reset {
+  background-color: transparent;
+  border: 1px solid $filter-border;
+
+  @include font_poppins(16px, 21px, 500, $font-dark);
+}

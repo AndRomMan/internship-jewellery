@@ -108,7 +108,7 @@
     if (sliderContainer) {
       iniSwiper();
 
-      if (swiper) {
+      if (swiper && paginationBlock && currentDotOut && totalDotsOut) {
         iniMobilePagination();
         breakpointChangeHandler();
         swiper.on('breakpoint', breakpointChangeHandler);

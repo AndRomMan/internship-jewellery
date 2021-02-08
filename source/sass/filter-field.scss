@@ -18,6 +18,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 10px;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-left: 0;
 
   background-color: transparent;
   border: none;
@@ -54,16 +58,35 @@
   flex-direction: column;
 }
 
-.filter-field__points label {
-  //
+.filter__point {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
+  cursor: pointer;
+
   @include font_poppins(14px, 18px, 500, $font-dark);
 
   @media (max-width: $desktop-breakpoint) {
     font-size: 16px;
     line-height: 21px;
   }
+}
 
-  // @media (max-width: $tablet-breakpoint) {
-  //   //
-  // }
+.filter__checkbox {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+
+  border: 1px solid $filter-border;
+}
+
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .filter__checkbox {
+  background-color: $filter-btn;
 }

@@ -86,6 +86,40 @@
 'use strict';
 
 (function () {
+  var accordionBlock = document.querySelector('.filter');
+  var TOGGLE_CLASS = 'filter-field__toggle';
+  var FIELD_CLASS = 'filter-field';
+  var TOGGLE_CLOSED_CLASS = 'filter-field__toggle--closed';
+  var FIELD_CLOSED_CLASS = 'faq-list__answer--closed';
+
+  if (accordionBlock) {
+    var accordionToggles = accordionBlock.querySelectorAll('.' + TOGGLE_CLASS);
+    var accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
+    iniAccordion(accordionToggles, accordionFields);
+  }
+
+  function iniAccordion(toggles, fields) {
+    if (toggles) {
+      toggles.forEach(function (elem) {
+        elem.classList.toggle(TOGGLE_CLOSED_CLASS);
+        elem.addEventListener('click', toggleClickHandler);
+      });
+    }
+
+    if (fields) {
+      fields.forEach(function (elem) {
+        elem.classList.toggle(FIELD_CLOSED_CLASS);
+      });
+    }
+  }
+
+  function toggleClickHandler(evt) {
+    console.log(evt.target);
+  }
+})();
+'use strict';
+
+(function () {
   var loginUserEmail = document.querySelector('#useremail');
   var USER_EMAIL_KEY = 'usermale';
 
@@ -209,7 +243,7 @@
     if (sliderContainer) {
       iniSwiper();
 
-      if (swiper) {
+      if (swiper && paginationBlock && currentDotOut && totalDotsOut) {
         iniMobilePagination();
         breakpointChangeHandler();
         swiper.on('breakpoint', breakpointChangeHandler);

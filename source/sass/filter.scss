@@ -1,0 +1,60 @@
+
+.filter {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  width: 250px;
+
+  @media (max-width: $desktop-breakpoint) {
+    // display: none;
+  }
+
+  // @media (max-width: $tablet-breakpoint) {
+  //   //
+  // }
+}
+
+.filter__link {
+  display: none;
+
+  @include font_poppins(16px, 21px, 500, $font-basic-light);
+
+  @media (max-width: $desktop-breakpoint) {
+    display: block;
+  }
+
+  // @media (max-width: $tablet-breakpoint) {
+  //   //
+  // }
+}
+
+.filter__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: none;
+  }
+}
+
+.filter__field {
+  @media (max-width: $desktop-breakpoint) {
+    //
+  }
+  // @media (max-width: $tablet-breakpoint) {
+  //   //
+  // }
+}
+
+.filter__close {
+  display: none;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: block;
+    //  position: absolute;
+  }
+
+  // @media (max-width: $tablet-breakpoint) {
+  //   //
+  // }
+}

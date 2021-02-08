@@ -1,0 +1,30 @@
+.catalog__slider-navigation {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.catalog-slider-navigation button {
+  @media (max-width: $tablet-breakpoint) {
+    display: none;
+  }
+}
+
+.catalog-slider-navigation__btn--prev {
+  //
+}
+
+.catalog-slider-navigation__btn--next {
+  //
+}
+
+.catalog-slider-navigation__pagination {
+  position: static;
+
+  @media (max-width: $tablet-breakpoint) {
+    display: block;
+  }
+}

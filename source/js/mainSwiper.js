@@ -12,7 +12,7 @@
   const BREAKPOINT_MOBILE = 767;
 
   function iniSwiper() {
-    swiper = new window.Swiper('.swiper-container', {
+    swiper = new window.Swiper('.swiper-main', {
       loop: true,
       slidesPerGroup: 2,
       slidesPerView: 2,

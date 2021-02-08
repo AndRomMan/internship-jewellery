@@ -31,12 +31,13 @@ $search-form-border-radius: 21px;
 $search-form-width: 80%;
 $search-form-tablet-width: 100%;
 $container-max-width: $desktop-max-width + 2 * $mobile_padding;
+$slider-page__item-margin: 15px;
+$catalog-wrapper-max-width: $desktop-max-width + 2 * $mobile_padding + 2 * $slider-page__item-margin;
 
 // -------------------------- basic colors
 $basic-dark: #000000;
 $basic-light: #ffffff;
 $dark-1d: #1d1613;
-// $dark-1c: #1c1612;
 $dark-grey: #9b9997;
 $silver: #c4c4c4;
 $light-grey: #f0eae4;
@@ -62,7 +63,6 @@ $login-form-btn-back: $fade-sienna;
 $font-basic-dark: $basic-dark;
 $font-basic-light: $basic-light;
 $font-dark: $dark-1d;
-// $font-dark-1c: $dark-1c;
 $font-dark-grey: $dark-grey;
 $font-expanded-menu: rgba($font-basic-light, 0.75);
 
@@ -82,8 +82,14 @@ $header-border: $extra-light-grey;
 $signup-form-border: $basic-light;
 $faq-list-border: $fade-sienna;
 $login-input-border: $dark-1d;
+$filter-border: $fade-sienna;
+
 // -------------------------- shadow colors
 $promo-shadow: rgba($basic-dark, 0.25);
+
+// background: #FFFFFF;
+// box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+
 
 // -------------------------- effects
 $link-underline: $fade-sienna;
@@ -92,6 +98,7 @@ $hover-outline: $fade-sienna;
 $hover-outline-light: $basic-light;
 $hover-outline-offset: 4px;
 $header-element-active-opacity: 0.6;
+
 // .button:hover,
 // .button:focus,
 // .button:active

@@ -1,0 +1,50 @@
+.price-slider {
+  @include font_poppins(14px, 18px, 500, $font-dark);
+
+  @media (max-width: $desktop-breakpoint) {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.price-slider label {
+  font: inherit;
+}
+
+.price-slider input {
+  width: 50px;
+
+  font: inherit;
+}
+
+.price-slider__line {
+  //
+}
+
+.low-line {
+  //
+}
+
+.low-price-wrapper {
+  //
+}
+
+.middle-line {
+  //
+}
+
+.low-pin {
+  //
+}
+
+.top-pin {
+  //
+}
+
+.top-line {
+  //
+}
+
+.top-price-wrapper {
+  //
+}

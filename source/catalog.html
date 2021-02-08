@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <meta name="description" content="We offer some Jewellery to purchase a little style for yourself.">
+    <title>Jewellery shop catalog</title>
+  </head>
+
+  <body>
+    <div class="svgbox" style="display: none;">
+      @@include('./img/compressed/sprite.svg')
+    </div>
+
+    <main>
+      <h1 class="visually-hidden">Catalog of the Jewellery Shop-salon.</h1>
+      <section class="promo promo--catalog">
+        <div class="promo__img-wrapper promo__img-wrapper--catalog">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/catalog-promo_desk@1x.webp 1x, img/catalog-promo_desk@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-promo_tab@1x.webp 1x, img/catalog-promo_tab@2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog-promo_mob@1x.webp 1x, img/catalog-promo_mob@2x.webp 2x">
+
+            <!-- 1х: 1366px; 2x: 2732px -->
+            <img src="img/catalog-promo_desk@1x.jpg" srcset="img/catalog-promo_desk@2x.jpg 2x" width="1366" height="261" alt="Gold rings.">
+          </picture>
+        </div>
+
+        <div class="promo__text-wrapper promo__text-wrapper--catalog">
+          <h2>
+            ALL JEWELLERY
+          </h2>
+          <p>
+            Discover picks of fashion's finest trends in our jewellery catalog
+          </p>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <h2 class="visually-hidden">Jewellery product showcase</h2>
+
+        <div class="container catalog__wrapper">
+          <div class="catalog__filter filter">
+
+            <button class="filter__close" type="button">
+              <svg width="32" height="32" role="img">
+                <use xlink:href="#close-round"></use>
+              </svg>
+            </button>
+
+            <a class="filter__link" href="filter.html">Filter</a>
+
+            <form class="filter__form" action="#" method="POST">
+
+              <fieldset class="filter__field filter-field">
+                <button class="filter-field__toggle" type="button">
+                  <span>
+                    Product
+                  </span>
+                  <svg width="17" height="10" role="img">
+                    <use xlink:href="#chevron_up"></use>
+                  </svg>
+                </button>
+
+                <div class="filter-field__points">
+                  <label for="necklaces">
+                    <input type="checkbox" id="necklaces" name="necklaces">
+                    Necklaces
+                  </label>
+
+                  <label for="chokers">
+                    <input type="checkbox" id="chokers" name="chokers">
+                    Chokers
+                  </label>
+
+                  <label for="rings">
+                    <input type="checkbox" id="rings" name="rings">
+                    Rings
+                  </label>
+
+                  <label for="earrings">
+                    <input type="checkbox" id="earrings" name="earrings">
+                    Earrings
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="filter__field filter-field">
+                <button class="filter-field__toggle" type="button">
+                  <span>
+                    Material
+                  </span>
+                  <svg width="17" height="10" role="img">
+                    <use xlink:href="#chevron_up"></use>
+                  </svg>
+                </button>
+                <div class="filter-field__points">
+
+                  <label for="gold">
+                    <input type="checkbox" id="gold" name="gold">
+                    Gold
+                  </label>
+
+                  <label for="silver">
+                    <input type="checkbox" id="silver" name="silver">
+                    Silver
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="filter__field filter-field">
+                <button class="filter-field__toggle" type="button">
+                  <span>
+                    Collection
+                  </span>
+                  <svg width="17" height="10" role="img">
+                    <use xlink:href="#chevron_up"></use>
+                  </svg>
+                </button>
+
+                <div class="filter-field__points">
+
+                  <label for="flamingo">
+                    <input type="checkbox" id="flamingo" name="flamingo">
+                    Pink flamingo
+                  </label>
+
+                  <label for="dreams">
+                    <input type="checkbox" id="dreams" name="dreams">
+                    Dreams
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="filter__field filter-field">
+                <button class="filter-field__toggle" type="button">
+                  <span>
+                    Price
+                  </span>
+                  <svg width="17" height="10" role="img">
+                    <use xlink:href="#chevron_up"></use>
+                  </svg>
+                </button>
+
+                <div class="filter-field__points">
+                  <div class="price-slider">
+                    <div class="price-slider__line low-line">
+                      <div class="low-price-wrapper">
+                        <label for="low-price">$
+                          <input type="text" name="low-price" id="low-price" value="55">
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="price-slider__line middle-line">
+                      <span class="low-pin"></span>
+                      <span class="top-pin"></span>
+                    </div>
+
+                    <div class="price-slider__line top-line">
+                      <div class="top-price-wrapper">
+                        <label for="top-price">$
+                          <input type="text" name="top-price" id="top-price" value="155">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <button type="submit">Apply</button>
+              <button type="reset">Clear All</button>
+            </form>
+          </div>
+
+          <div class="catslog__slider-container">
+            <div class="swiper-container catalog__slider">
+              <div class="swiper-wrapper">
+                <div class="catalog__slider-page slider-page swiper-slide">
+                  <a href="#" class="slider__item slider-page__item">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/cat_double-pearl-earrings_desk@1x.jpg" srcset="cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272" alt="The new Jewellery collection">
+                    </picture>
+                    <h3>Necklace with amethyst</h3>
+                    <p class="slider__price">
+                      <span>&#36; </span>
+                      <span>145</span>
+                    </p>
+                  </a>
+
+                  <a href="#" class="slider__item slider-page__item">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/cat_double-pearl-earrings_desk@1x.jpg" srcset="cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272" alt="The new Jewellery collection">
+                    </picture>
+                    <h3>Necklace with amethyst</h3>
+                    <p class="slider__price">
+                      <span>&#36; </span>
+                      <span>145</span>
+                    </p>
+                  </a>
+
+                  <a href="#" class="slider__item slider-page__item">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/cat_double-pearl-earrings_desk@1x.jpg" srcset="cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272" alt="The new Jewellery collection">
+                    </picture>
+                    <h3>Necklace with amethyst</h3>
+                    <p class="slider__price">
+                      <span>&#36; </span>
+                      <span>145</span>
+                    </p>
+                  </a>
+
+                  <a href="#" class="slider__item slider-page__item">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/cat_double-pearl-earrings_desk@1x.jpg" srcset="cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272" alt="The new Jewellery collection">
+                    </picture>
+                    <h3>Necklace with amethyst</h3>
+                    <p class="slider__price">
+                      <span>&#36; </span>
+                      <span>145</span>
+                    </p>
+                  </a>
+
+                  <a href="#" class="slider__item slider-page__item">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1024px)" srcset="img/cat_double-pearl-earrings_desk@1x.webp 1x, img/cat_double-pearl-earrings_desk@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/cat_double-pearl-earrings_tab@1x.webp 1x, img/cat_double-pearl-earrings_tab@2x.webp 2x">
+                      <source type="image/webp" srcset="img/cat_double-pearl-earrings_mob@1x.webp 1x, img/cat_double-pearl-earrings_mob@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/cat_double-pearl-earrings_desk@1x.jpg" srcset="cat_double-pearl-earrings_desk@2x.jpg 2x" width="270" height="272" alt="The new Jewellery collection">
+                    </picture>
+                    <h3>Necklace with amethyst</h3>
+                    <p class="slider__price">
+                      <span>&#36; </span>
+                      <span>145</span>
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="catalog__slider-navigation">
+              <button class="catalog-slider-navigation__btn--prev" aria-label="Previous">
+                Previous
+              </button>
+
+              <div class="slider-pagination catalog-slider-navigation__pagination"></div>
+
+              <button class="catalog-slider-navigation__btn--next" aria-label="Next">
+                Next
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

@@ -54,6 +54,38 @@
 'use strict';
 
 (function () {
+  var swiper;
+  var sliderContainer = document.querySelector('.catalog__slider');
+
+  function iniCatalogSwiper() {
+    swiper = new window.Swiper('.catalog__slider', {
+      loop: true,
+      slidesPerView: 1,
+      pagination: {
+        el: document.querySelector('.catalog-slider-navigation__pagination'),
+        clickable: 'true',
+        renderBullet: function renderBullet(index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+      },
+      navigation: {
+        nextEl: '.catalog-slider-navigation__btn--next',
+        prevEl: '.catalog-slider-navigation__btn--prev'
+      }
+    });
+  }
+
+  function iniSlider() {
+    if (sliderContainer) {
+      iniCatalogSwiper();
+    }
+  }
+
+  iniSlider();
+})();
+'use strict';
+
+(function () {
   var loginUserEmail = document.querySelector('#useremail');
   var USER_EMAIL_KEY = 'usermale';
 
@@ -72,6 +104,121 @@
 'use strict';
 
 (function () {})();
+'use strict';
+
+(function () {
+  var swiper;
+  var sliderContainer = document.querySelector('.swiper-container');
+  var paginationBlock = document.querySelector('.slider-pagination');
+  var currentDotOut = document.querySelector('.slider-mobile-pagination__current');
+  var totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
+  var ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
+  var BREAKPOINT_MOBILE = 767;
+
+  function iniSwiper() {
+    swiper = new window.Swiper('.swiper-main', {
+      loop: true,
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 30,
+      centeredSlidesBounds: true,
+      pagination: {
+        el: document.querySelector('.slider-pagination'),
+        clickable: 'true',
+        renderBullet: function renderBullet(index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+      },
+      navigation: {
+        nextEl: '.slider-buttons__item--next',
+        prevEl: '.slider-buttons__item--prev'
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          slidesPerGroup: 2
+        },
+        1023: {
+          slidesPerView: 3,
+          slidesPerGroup: 3
+        },
+        1169: {
+          slidesPerView: 4,
+          slidesPerGroup: 4
+        }
+      }
+    });
+  }
+
+  function getBullets() {
+    var bullets;
+
+    if (paginationBlock) {
+      bullets = paginationBlock.children;
+    }
+
+    return bullets;
+  }
+
+  function setMobileTotalBullet(bullets) {
+    var totalBullets = bullets.length;
+    return totalBullets;
+  }
+
+  function setMobileCurrentBullet(bullets) {
+    var currentBullet;
+    Array.from(bullets).forEach(function (element) {
+      if (element.classList.contains(ACTIVE_BULLET_CLASS)) {
+        currentBullet = +element.textContent;
+      }
+    });
+    return currentBullet;
+  }
+
+  function renderMobilePagination(bullets) {
+    totalDotsOut.textContent = setMobileTotalBullet(bullets);
+    currentDotOut.textContent = setMobileCurrentBullet(bullets);
+  }
+
+  function realIndexChangeHandler(bullets) {
+    swiper.on('transitionEnd', function () {
+      renderMobilePagination(bullets);
+    });
+  }
+
+  function setMobilePagination() {
+    var bullets = getBullets();
+    realIndexChangeHandler(bullets);
+  }
+
+  function breakpointChangeHandler() {
+    var viewport = document.documentElement.clientWidth;
+
+    if (viewport < BREAKPOINT_MOBILE) {
+      setMobilePagination();
+    }
+  }
+
+  function iniMobilePagination() {
+    var bullets = getBullets();
+    renderMobilePagination(bullets);
+  }
+
+  function iniSlider() {
+    if (sliderContainer) {
+      iniSwiper();
+
+      if (swiper) {
+        iniMobilePagination();
+        breakpointChangeHandler();
+        swiper.on('breakpoint', breakpointChangeHandler);
+      }
+    }
+  }
+
+  iniSlider();
+})();
 'use strict';
 
 (function () {
@@ -296,120 +443,5 @@
   }
 
   iniSignupEmailLocalStorage();
-})();
-'use strict';
-
-(function () {
-  var swiper;
-  var sliderContainer = document.querySelector('.swiper-container');
-  var paginationBlock = document.querySelector('.slider-pagination');
-  var currentDotOut = document.querySelector('.slider-mobile-pagination__current');
-  var totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
-  var ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
-  var BREAKPOINT_MOBILE = 767;
-
-  function iniSwiper() {
-    swiper = new window.Swiper('.swiper-container', {
-      loop: true,
-      slidesPerGroup: 2,
-      slidesPerView: 2,
-      centeredSlides: false,
-      spaceBetween: 30,
-      centeredSlidesBounds: true,
-      pagination: {
-        el: document.querySelector('.slider-pagination'),
-        clickable: 'true',
-        renderBullet: function renderBullet(index, className) {
-          return '<span class="' + className + '">' + (index + 1) + '</span>';
-        }
-      },
-      navigation: {
-        nextEl: '.slider-buttons__item--next',
-        prevEl: '.slider-buttons__item--prev'
-      },
-      breakpoints: {
-        767: {
-          slidesPerView: 2,
-          slidesPerGroup: 2
-        },
-        1023: {
-          slidesPerView: 3,
-          slidesPerGroup: 3
-        },
-        1169: {
-          slidesPerView: 4,
-          slidesPerGroup: 4
-        }
-      }
-    });
-  }
-
-  function getBullets() {
-    var bullets;
-
-    if (paginationBlock) {
-      bullets = paginationBlock.children;
-    }
-
-    return bullets;
-  }
-
-  function setMobileTotalBullet(bullets) {
-    var totalBullets = bullets.length;
-    return totalBullets;
-  }
-
-  function setMobileCurrentBullet(bullets) {
-    var currentBullet;
-    Array.from(bullets).forEach(function (element) {
-      if (element.classList.contains(ACTIVE_BULLET_CLASS)) {
-        currentBullet = +element.textContent;
-      }
-    });
-    return currentBullet;
-  }
-
-  function renderMobilePagination(bullets) {
-    totalDotsOut.textContent = setMobileTotalBullet(bullets);
-    currentDotOut.textContent = setMobileCurrentBullet(bullets);
-  }
-
-  function realIndexChangeHandler(bullets) {
-    swiper.on('transitionEnd', function () {
-      renderMobilePagination(bullets);
-    });
-  }
-
-  function setMobilePagination() {
-    var bullets = getBullets();
-    realIndexChangeHandler(bullets);
-  }
-
-  function breakpointChangeHandler() {
-    var viewport = document.documentElement.clientWidth;
-
-    if (viewport < BREAKPOINT_MOBILE) {
-      setMobilePagination();
-    }
-  }
-
-  function iniMobilePagination() {
-    var bullets = getBullets();
-    renderMobilePagination(bullets);
-  }
-
-  function iniSlider() {
-    if (sliderContainer) {
-      iniSwiper();
-
-      if (swiper) {
-        iniMobilePagination();
-        breakpointChangeHandler();
-        swiper.on('breakpoint', breakpointChangeHandler);
-      }
-    }
-  }
-
-  iniSlider();
 })();
 //# sourceMappingURL=main.js.map

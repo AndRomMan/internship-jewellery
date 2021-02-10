@@ -1,4 +1,4 @@
-.body-login {
+.login-page {
   position: relative;
 
   display: flex;
@@ -6,12 +6,12 @@
   justify-content: space-between;
 }
 
-.body-login .header__wrapper {
+.login-page .header__wrapper {
   display: flex;
   justify-content: center;
 }
 
-.body-login .login {
+.login-page .login {
   top: 430px;
 
   @media (max-width: $tablet-breakpoint) {

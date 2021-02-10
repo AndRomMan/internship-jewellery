@@ -54,11 +54,56 @@
 'use strict';
 
 (function () {
-  var swiper;
+  var filterBlock = document.querySelector('.filter');
+  var closeFilterBtn = document.querySelector('.filter__close');
+  var openFilterBtn = document.querySelector('.catalog__filter-link');
+  var FILTER_OPENED = 'filter--opened';
+
+  function iniFilter() {
+    if (filterBlock && openFilterBtn) {
+      openFilterBtn.addEventListener('click', openFilterBtnHandler);
+      window.addEventListener('keydown', escapeHAndler);
+    }
+  }
+
+  function closeFilterBtnHandler() {
+    filterBlock.classList.toggle(FILTER_OPENED);
+    closeFilterBtn.removeEventListener('click', closeFilterBtnHandler);
+  }
+
+  function escapeHAndler(evt) {
+    if (evt.code === 'Escape') {
+      evt.preventDefault();
+      changeFilterState();
+    }
+  }
+
+  function changeFilterState() {
+    if (filterBlock.classList.contains(FILTER_OPENED)) {
+      closeFilterBtn.removeEventListener('click', closeFilterBtnHandler);
+    } else {
+      closeFilterBtn.addEventListener('click', closeFilterBtnHandler);
+    }
+
+    filterBlock.classList.toggle(FILTER_OPENED);
+  }
+
+  function openFilterBtnHandler(evt) {
+    evt.preventDefault();
+    changeFilterState();
+  }
+
+  iniFilter();
+})();
+'use strict';
+
+(function () {
+  var swiperCatalog;
   var sliderContainer = document.querySelector('.catalog__slider');
+  var sliderNavigation = document.querySelector('.catalog__slider-navigation');
 
   function iniCatalogSwiper() {
-    swiper = new window.Swiper('.catalog__slider', {
+    swiperCatalog = new window.Swiper('.catalog__slider', {
       loop: true,
       slidesPerView: 1,
       pagination: {
@@ -75,46 +120,43 @@
     });
   }
 
-  function iniSlider() {
-    if (sliderContainer) {
+  function iniCatalogSlider() {
+    if (sliderContainer && sliderNavigation) {
       iniCatalogSwiper();
     }
   }
 
-  iniSlider();
+  iniCatalogSlider();
 })();
 'use strict';
 
 (function () {
-  var accordionBlock = document.querySelector('.filter');
-  var TOGGLE_CLASS = 'filter-field__toggle';
+  var accordionBlock = document.querySelector('.filter__form');
   var FIELD_CLASS = 'filter-field';
-  var TOGGLE_CLOSED_CLASS = 'filter-field__toggle--closed';
-  var FIELD_CLOSED_CLASS = 'faq-list__answer--closed';
+  var TOGGLE_CLASS = 'filter-field__toggle';
+  var FIELD_CLOSED_CLASS = 'filter-field--closed';
 
   if (accordionBlock) {
     var accordionToggles = accordionBlock.querySelectorAll('.' + TOGGLE_CLASS);
     var accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
-    iniAccordion(accordionToggles, accordionFields);
-  }
 
-  function iniAccordion(toggles, fields) {
-    if (toggles) {
-      toggles.forEach(function (elem) {
-        elem.classList.toggle(TOGGLE_CLOSED_CLASS);
-        elem.addEventListener('click', toggleClickHandler);
-      });
-    }
-
-    if (fields) {
-      fields.forEach(function (elem) {
-        elem.classList.toggle(FIELD_CLOSED_CLASS);
-      });
+    if (accordionToggles && accordionFields) {
+      iniAccordion(accordionFields, accordionToggles);
     }
   }
 
-  function toggleClickHandler(evt) {
-    console.log(evt.target);
+  function iniAccordion(fields, toggles) {
+    fields.forEach(function (elem) {
+      elem.classList.toggle(FIELD_CLOSED_CLASS);
+    });
+    toggles.forEach(function (elem) {
+      elem.addEventListener('click', toggleClickHandler);
+    });
+  }
+
+  function toggleClickHandler() {
+    var currentField = this.parentNode;
+    currentField.classList.toggle(FIELD_CLOSED_CLASS);
   }
 })();
 'use strict';
@@ -304,9 +346,7 @@
 
   iniMenu();
 
-  function burgerBtnClickHandler(evt) {
-    console.log(evt.type);
-
+  function burgerBtnClickHandler() {
     if (burgerBtn) {
       burgerBtn.classList.toggle(BURGER_BTN_MENU);
     }

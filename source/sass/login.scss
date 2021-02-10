@@ -169,9 +169,12 @@
   }
 }
 
-.login button:hover,
-.login button:focus,
-.login input:hover,
+.login__close:hover,
+.login__close:focus {
+  outline: 2px solid $hover-outline;
+  outline-offset: 0.5 * $hover-outline-offset;
+}
+
 .login input:focus {
   outline: 2px solid $hover-outline;
   outline-offset: 0.5 * $hover-outline-offset;
@@ -183,8 +186,13 @@
   opacity: $header-element-active-opacity;
 }
 
-.login a[href]:hover,
 .login a[href]:focus, {
   outline: 2px solid $hover-outline;
   outline-offset: 0;
+}
+
+.login__btn:hover,
+.login__btn:focus {
+  outline: 2px solid $hover-outline-light;
+  outline-offset: -2 * $hover-outline-offset;
 }

@@ -2,54 +2,35 @@
 'use strict';
 
 (function () {
-  let accordionBlock = document.querySelector('.filter');
+  let accordionBlock = document.querySelector('.filter__form');
 
-  const TOGGLE_CLASS = 'filter-field__toggle';
   const FIELD_CLASS = 'filter-field';
+  const TOGGLE_CLASS = 'filter-field__toggle';
 
-  const TOGGLE_CLOSED_CLASS = 'filter-field__toggle--closed';
-  const FIELD_CLOSED_CLASS = 'faq-list__answer--closed';
+  const FIELD_CLOSED_CLASS = 'filter-field--closed';
 
   if (accordionBlock) {
     let accordionToggles = accordionBlock.querySelectorAll('.' + TOGGLE_CLASS);
     let accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
 
-    iniAccordion(accordionToggles, accordionFields);
-  }
-
-  function iniAccordion(toggles, fields) {
-    if (toggles) {
-      toggles.forEach((elem) => {
-        elem.classList.toggle(TOGGLE_CLOSED_CLASS);
-        elem.addEventListener('click', toggleClickHandler);
-      });
-    }
-
-    if (fields) {
-      fields.forEach((elem) => {
-        elem.classList.toggle(FIELD_CLOSED_CLASS);
-      });
+    if (accordionToggles && accordionFields) {
+      iniAccordion(accordionFields, accordionToggles);
     }
   }
 
-  function toggleClickHandler(evt) {
-    console.log(evt.target);
+  function iniAccordion(fields, toggles) {
+    fields.forEach((elem) => {
+      elem.classList.toggle(FIELD_CLOSED_CLASS);
+    });
 
-    // let questionNode = this.parentNode;
-    // questionNode.classList.toggle(TOGGLE_CLOSED_CLASS);
+    toggles.forEach((elem) => {
+      elem.addEventListener('click', toggleClickHandler);
+    });
+  }
 
-    // let answerNode = questionNode.nextElementSibling;
-    // answerNode.classList.toggle(FIELD_CLOSED_CLASS);
+  function toggleClickHandler() {
+    let currentField = this.parentNode;
 
-    // let currentQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
-
-    // currentQuestions.forEach((element) => {
-    //   if (questionNode === element) {
-    //     return;
-    //   } else if (!element.classList.contains(CLOSED_QUESTION_CLASS)) {
-    //     element.classList.toggle(CLOSED_QUESTION_CLASS);
-    //     element.nextElementSibling.classList.toggle(CLOSED_ANSWER_CLASS);
-    //   }
-    // });
+    currentField.classList.toggle(FIELD_CLOSED_CLASS);
   }
 })();

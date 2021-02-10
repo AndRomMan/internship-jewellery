@@ -1,7 +1,6 @@
 'use strict';
 
 (function () {
-  // new Swiper('.swiper-container');
   let pageBody = document.querySelector('body');
   let modal = document.querySelector('.modal');
 

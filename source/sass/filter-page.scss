@@ -1,0 +1,14 @@
+.filter-page {
+  display: none;
+
+  @media (max-width: $desktop-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.filter-page .header__wrapper {
+  display: flex;
+  justify-content: center;
+}

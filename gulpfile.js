@@ -155,8 +155,8 @@ function browserSync() {
     open: true,
     cors: true,
     ui: false,
-    browser: ['firefox'],
-    // browser: ['chrome', 'firefox'],
+    // browser: ['firefox'],
+    browser: ['chrome'],
     // browser: ["chrome", "firefox"]
   });
 }

@@ -20,17 +20,12 @@
   @media (max-width: $desktop-breakpoint) {
     margin: 0 0 21px 0;
   }
-
-  // @media (max-width: $tablet-breakpoint) {
-  //   //
-  // }
 }
 
 .nav-list__item a {
   @include font_poppins(16px, 24px, 500, $font-dark);
 
   @media (max-width: $desktop-breakpoint) {
-    // padding-right: 20px;
     @include font_poppins(24px, 36px, 500, $font-basic-light);
   }
 }

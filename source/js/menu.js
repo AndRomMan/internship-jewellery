@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 'use strict';
 
 (function () {
@@ -51,8 +50,7 @@
 
   iniMenu();
 
-  function burgerBtnClickHandler(evt) {
-    console.log(evt.type);
+  function burgerBtnClickHandler() {
     if (burgerBtn) {
       burgerBtn.classList.toggle(BURGER_BTN_MENU);
     }
@@ -78,10 +76,3 @@
     }
   }
 })();
-
-// header--menu
-// burger-btn--menu
-// search-form--menu
-// logo--menu
-// cart-link--menu
-//  navbar--menu

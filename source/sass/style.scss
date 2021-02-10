@@ -1,4 +1,3 @@
-// @import "vendor/swiper-bundle";
 @import "vendor/swiper-vars";
 @import "vendor/swiper";
 @import "vendor/pagination";
@@ -39,11 +38,14 @@
 @import "modal";
 @import "login";
 // login.html
-@import "body-login";
+@import "login-page";
 // catalog.html
 @import "catalog";
 @import "filter";
 @import "filter-field";
 @import "price-slider";
 @import "slider-page";
+@import "slider-item";
 @import "catalog-slider-navigation";
+@import "swiper-pagination-bullet";
+@import "filter-page";

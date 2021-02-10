@@ -1,11 +1,13 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 (function () {
-  let swiper;
+  let swiperCatalog;
   let sliderContainer = document.querySelector('.catalog__slider');
+  let sliderNavigation = document.querySelector('.catalog__slider-navigation');
 
   function iniCatalogSwiper() {
-    swiper = new window.Swiper('.catalog__slider', {
+    swiperCatalog = new window.Swiper('.catalog__slider', {
       loop: true,
       slidesPerView: 1,
       pagination: {
@@ -23,11 +25,11 @@
     });
   }
 
-  function iniSlider() {
-    if (sliderContainer) {
+  function iniCatalogSlider() {
+    if (sliderContainer && sliderNavigation) {
       iniCatalogSwiper();
     }
   }
 
-  iniSlider();
+  iniCatalogSlider();
 })();

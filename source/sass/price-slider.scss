@@ -1,50 +1,135 @@
 .price-slider {
+  display: flex;
+  justify-content: space-between;
+  // margin-top: 2px;
+  padding-bottom: 35px;
+
   @include font_poppins(14px, 18px, 500, $font-dark);
 
   @media (max-width: $desktop-breakpoint) {
+    margin-top: 11px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 11px;
+
     font-size: 16px;
     line-height: 21px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    margin-top: 9px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .price-slider label {
+  position: absolute;
+  top: 15px;
+
+  padding: 0;
+
   font: inherit;
 }
 
 .price-slider input {
-  width: 50px;
+  max-width: 30px;
 
   font: inherit;
 }
 
+.price-slider label:hover,
+.price-slider label:focus {
+  outline: none;
+}
+
+.price-slider input:hover,
+.price-slider input:focus {
+  outline: 2px solid $hover-outline;
+  outline-offset: 0.2 * $hover-outline-offset;
+}
+
+
 .price-slider__line {
-  //
+  position: relative;
+
+  height: 1px;
 }
 
-.low-line {
-  //
+.price-slider__line--low {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 26%;
+
+  background-color: $filter-price-slider;
+
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 17%;
+  }
 }
 
-.low-price-wrapper {
-  //
+.price-slider__line--low label {
+  right: -25px;
 }
 
-.middle-line {
-  //
+.price-slider__line--middle {
+  width: 100%;
+
+  background-color: $filter-border;
 }
 
-.low-pin {
-  //
+
+.price-slider__pin {
+  position: absolute;
+  top: -7px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $filter-border;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
-.top-pin {
-  //
+.price-slider__pin--low {
+  left: -8px;
+
+  @media (max-width: $desktop-breakpoint) {
+    left: -9px;
+  }
 }
 
-.top-line {
-  //
+.price-slider__pin--top {
+  right: -8px;
+  z-index: 3;
+
+  @media (max-width: $desktop-breakpoint) {
+    right: -9px;
+  }
 }
 
-.top-price-wrapper {
-  //
+.price-slider__line--top {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 21%;
+
+  background-color: $filter-price-slider;
+
+  @media (max-width: $desktop-breakpoint) {
+    width: 24%;
+  }
+}
+
+.price-slider__line--top label {
+  left: -16px;
+
+  @media (max-width: $desktop-breakpoint) {
+    left: -19px;
+  }
 }

@@ -1,22 +1,4 @@
-body {
-  position: relative;
-
-  background-color: $body_back;
-}
-
-// modal.js - отключение прокрутки при открытом модальном
-.body--overflow {
-  overflow: hidden;
-}
-
-// убираем скругление для полей формы в iOs
-input,
-textarea {
-  border: none;
-  border-radius: 0;
-}
-
-svg path {
-  fill: inherit;
-  stroke: inherit;
-}
+// svg path {
+//   fill: inherit;
+//   stroke: inherit;
+// }

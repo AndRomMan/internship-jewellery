@@ -39,7 +39,7 @@
     localStorage.setItem(USER_EMAIL_KEY, loginUserEmail.value);
   }
 
-  function iniLoginEmailLocalStorage() {
+  function initLoginEmailLocalStorage() {
     if (loginUserEmail) {
       loginUserEmail.addEventListener('blur', inputLoginEmailBlurHandler);
     }
@@ -47,7 +47,7 @@
     // submitFormBtn.addEventListener('click', submitClickHandler);
   }
 
-  iniLoginEmailLocalStorage();
+  initLoginEmailLocalStorage();
 
   // window.loginForm = {
   //   iniEmailLocalStorage,

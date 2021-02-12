@@ -8,7 +8,7 @@
   var CLOSED_ANSWER_CLASS = 'faq-list__answer--closed';
   var CLOSED_QUESTION_CLASS = 'faq-list__question--closed';
 
-  function iniAccordion(quesions, answers, toggles) {
+  function initAccordion(quesions, answers, toggles) {
     if (quesions) {
       quesions.forEach(function (elem) {
         elem.classList.toggle(CLOSED_QUESTION_CLASS);
@@ -35,9 +35,7 @@
     answerNode.classList.toggle(CLOSED_ANSWER_CLASS);
     var currentQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
     currentQuestions.forEach(function (element) {
-      if (questionNode === element) {
-        return;
-      } else if (!element.classList.contains(CLOSED_QUESTION_CLASS)) {
+      if (questionNode !== element && !element.classList.contains(CLOSED_QUESTION_CLASS)) {
         element.classList.toggle(CLOSED_QUESTION_CLASS);
         element.nextElementSibling.classList.toggle(CLOSED_ANSWER_CLASS);
       }
@@ -48,7 +46,7 @@
     var accordionQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
     var accordionAnswers = accordionBlock.querySelectorAll('.' + ACCORDION_ANSWER_CLASS);
     var accordionToggles = accordionBlock.querySelectorAll('.' + ACCORDION_TOGGLE_CLASS);
-    iniAccordion(accordionQuestions, accordionAnswers, accordionToggles);
+    initAccordion(accordionQuestions, accordionAnswers, accordionToggles);
   }
 })();
 'use strict';
@@ -59,7 +57,7 @@
   var openFilterBtn = document.querySelector('.catalog__filter-link');
   var FILTER_OPENED = 'filter--opened';
 
-  function iniFilter() {
+  function initFilter() {
     if (filterBlock && openFilterBtn) {
       openFilterBtn.addEventListener('click', openFilterBtnHandler);
       window.addEventListener('keydown', escapeHAndler);
@@ -93,7 +91,7 @@
     changeFilterState();
   }
 
-  iniFilter();
+  initFilter();
 })();
 'use strict';
 
@@ -102,7 +100,7 @@
   var sliderContainer = document.querySelector('.catalog__slider');
   var sliderNavigation = document.querySelector('.catalog__slider-navigation');
 
-  function iniCatalogSwiper() {
+  function initCatalogSwiper() {
     swiperCatalog = new window.Swiper('.catalog__slider', {
       loop: true,
       slidesPerView: 1,
@@ -120,13 +118,13 @@
     });
   }
 
-  function iniCatalogSlider() {
+  function initCatalogSlider() {
     if (sliderContainer && sliderNavigation) {
-      iniCatalogSwiper();
+      initCatalogSwiper();
     }
   }
 
-  iniCatalogSlider();
+  initCatalogSlider();
 })();
 'use strict';
 
@@ -141,11 +139,11 @@
     var accordionFields = accordionBlock.querySelectorAll('.' + FIELD_CLASS);
 
     if (accordionToggles && accordionFields) {
-      iniAccordion(accordionFields, accordionToggles);
+      initAccordion(accordionFields, accordionToggles);
     }
   }
 
-  function iniAccordion(fields, toggles) {
+  function initAccordion(fields, toggles) {
     fields.forEach(function (elem) {
       elem.classList.toggle(FIELD_CLOSED_CLASS);
     });
@@ -169,17 +167,14 @@
     localStorage.setItem(USER_EMAIL_KEY, loginUserEmail.value);
   }
 
-  function iniLoginEmailLocalStorage() {
+  function initLoginEmailLocalStorage() {
     if (loginUserEmail) {
       loginUserEmail.addEventListener('blur', inputLoginEmailBlurHandler);
     }
   }
 
-  iniLoginEmailLocalStorage();
+  initLoginEmailLocalStorage();
 })();
-'use strict';
-
-(function () {})();
 'use strict';
 
 (function () {
@@ -191,7 +186,7 @@
   var ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
   var BREAKPOINT_MOBILE = 767;
 
-  function iniSwiper() {
+  function initSwiper() {
     swiper = new window.Swiper('.swiper-main', {
       loop: true,
       slidesPerGroup: 2,
@@ -276,25 +271,28 @@
     }
   }
 
-  function iniMobilePagination() {
+  function initMobilePagination() {
     var bullets = getBullets();
     renderMobilePagination(bullets);
   }
 
-  function iniSlider() {
+  function initSlider() {
     if (sliderContainer) {
-      iniSwiper();
+      initSwiper();
 
       if (swiper && paginationBlock && currentDotOut && totalDotsOut) {
-        iniMobilePagination();
+        initMobilePagination();
         breakpointChangeHandler();
         swiper.on('breakpoint', breakpointChangeHandler);
       }
     }
   }
 
-  iniSlider();
+  initSlider();
 })();
+'use strict';
+
+(function () {})();
 'use strict';
 
 (function () {
@@ -313,7 +311,7 @@
   var cartLink = document.querySelector('.cart-link');
   var navbar = document.querySelector('.navbar');
 
-  function iniMenu() {
+  function initMenu() {
     if (burgerBtn) {
       burgerBtn.addEventListener('click', burgerBtnClickHandler);
       burgerBtn.classList.toggle(BURGER_BTN_JS);
@@ -344,7 +342,7 @@
     }
   }
 
-  iniMenu();
+  initMenu();
 
   function burgerBtnClickHandler() {
     if (burgerBtn) {
@@ -429,9 +427,9 @@
     });
   }
 
-  iniModalToggles();
+  initModalToggles();
 
-  function iniModalToggles() {
+  function initModalToggles() {
     if (loginLinks) {
       setModalTogglesClickHandler(loginLinks);
     }
@@ -510,12 +508,12 @@
     localStorage.setItem(USER_EMAIL_KEY, signupUserEmail.value);
   }
 
-  function iniSignupEmailLocalStorage() {
+  function initSignupEmailLocalStorage() {
     if (signupUserEmail) {
       signupUserEmail.addEventListener('blur', inputSignupEmailBlurHandler);
     }
   }
 
-  iniSignupEmailLocalStorage();
+  initSignupEmailLocalStorage();
 })();
 //# sourceMappingURL=main.js.map

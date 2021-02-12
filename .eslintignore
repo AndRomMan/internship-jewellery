@@ -2,3 +2,9 @@
 /.vscode
 /.ssh
 node_modules
+source/js/vendor
+source/sass
+source/scss
+source/img
+source/fonts
+source/favicon

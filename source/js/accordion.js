@@ -11,7 +11,7 @@
   const CLOSED_ANSWER_CLASS = 'faq-list__answer--closed';
   const CLOSED_QUESTION_CLASS = 'faq-list__question--closed';
 
-  function iniAccordion(quesions, answers, toggles) {
+  function initAccordion(quesions, answers, toggles) {
     if (quesions) {
       quesions.forEach((elem) => {
         elem.classList.toggle(CLOSED_QUESTION_CLASS);
@@ -41,9 +41,7 @@
     let currentQuestions = accordionBlock.querySelectorAll('.' + ACCORDION_QUESTION_CLASS);
 
     currentQuestions.forEach((element) => {
-      if (questionNode === element) {
-        return;
-      } else if (!element.classList.contains(CLOSED_QUESTION_CLASS)) {
+      if (questionNode !== element && !element.classList.contains(CLOSED_QUESTION_CLASS)) {
         element.classList.toggle(CLOSED_QUESTION_CLASS);
         element.nextElementSibling.classList.toggle(CLOSED_ANSWER_CLASS);
       }
@@ -57,6 +55,6 @@
 
     let accordionToggles = accordionBlock.querySelectorAll('.' + ACCORDION_TOGGLE_CLASS);
 
-    iniAccordion(accordionQuestions, accordionAnswers, accordionToggles);
+    initAccordion(accordionQuestions, accordionAnswers, accordionToggles);
   }
 })();

@@ -42,14 +42,14 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/sass/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/*.js",
     "build": "gulp buildProject",
     "start": "gulp startServer",
     "checkJs": "eslint source/js/*.js",
-    "fixJs": "eslint --fix source/js/",
+    "fixJs": "eslint --fix source/js/*.js",
     "checkHtml": "htmlhint source/**/*.html",
-    "checkCss": "stylelint source/sass/*.scss --syntax scss",
+    "checkCss": "stylelint source/sass/**/*.scss --syntax scss",
     "delNpmModules": "rimraf node_modules"
   },
   "browserslist": [

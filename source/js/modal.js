@@ -69,9 +69,9 @@
   }
 
   // инициализации перключателей для вызова модального окна
-  iniModalToggles();
+  initModalToggles();
 
-  function iniModalToggles() {
+  function initModalToggles() {
     if (loginLinks) {
       setModalTogglesClickHandler(loginLinks);
     }

@@ -1,0 +1,10 @@
+body {
+  position: relative;
+
+  background-color: $body_back;
+}
+
+// modal.js - отключение прокрутки при открытом модальном
+.body--overflow {
+  overflow: hidden;
+}

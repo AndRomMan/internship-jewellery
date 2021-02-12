@@ -17,7 +17,7 @@
   let cartLink = document.querySelector('.cart-link');
   let navbar = document.querySelector('.navbar');
 
-  function iniMenu() {
+  function initMenu() {
     if (burgerBtn) {
       burgerBtn.addEventListener('click', burgerBtnClickHandler);
       burgerBtn.classList.toggle(BURGER_BTN_JS);
@@ -48,7 +48,7 @@
     }
   }
 
-  iniMenu();
+  initMenu();
 
   function burgerBtnClickHandler() {
     if (burgerBtn) {

@@ -23,28 +23,24 @@
     <title>Jewellery shop</title>
   </head>
 
-  <body class="filter-page">
+  <body>
     <div class="svgbox" style="display: none;">
       @@include('./img/compressed/sprite.svg')
     </div>
 
     <header class="header header--menu">
-      <div class=" container">
-        <div class="header__wrapper">
-          <a href="index.html" class="header__logo logo logo--menu">
-            <svg width="66" height="66" role="img">
-              <use xlink:href="#logo"></use>
-            </svg>
-          </a>
-        </div>
+      <div class="header__wrapper header__wrapper--page">
+        <a href="index.html" class="header__logo logo logo--menu">
+          <svg width="66" height="66" role="img">
+            <use xlink:href="#logo"></use>
+          </svg>
+        </a>
       </div>
     </header>
 
-
     <main>
       <h1 class="visually-hidden">Shop-salon of Jewellery filter form</h1>
-
-      <div class="catalog__filter filter filter--page">
+      <div class="filter filter--page">
         <form class="filter__form" action="#" method="POST">
 
           <fieldset class="filter__field filter-field">
@@ -60,25 +56,25 @@
             <div class="filter-field__point">
               <label for="necklaces">
                 <input type="checkbox" id="necklaces" name="necklaces">
-                <span class="filter__checkbox"></span>
+                <span class=" filter-field__checkbox"></span>
                 <span>Necklaces</span>
               </label>
 
               <label for="chokers">
                 <input type="checkbox" id="chokers" name="chokers">
-                <span class="filter__checkbox"></span>
+                <span class=" filter-field__checkbox"></span>
                 <span>Chokers</span>
               </label>
 
               <label for="rings">
                 <input type="checkbox" id="rings" name="rings">
-                <span class="filter__checkbox"></span>
+                <span class=" filter-field__checkbox"></span>
                 <span>Rings</span>
               </label>
 
               <label for="earrings">
                 <input type="checkbox" id="earrings" name="earrings">
-                <span class="filter__checkbox"></span>
+                <span class=" filter-field__checkbox"></span>
                 <span>Earrings</span>
               </label>
             </div>
@@ -97,13 +93,13 @@
 
               <label for="gold">
                 <input type="checkbox" id="gold" name="gold">
-                <span class="filter__checkbox"></span>
+                <span class=" filter-field__checkbox"></span>
                 <span>Gold</span>
               </label>
 
               <label for="silver">
                 <input type="checkbox" id="silver" name="silver">
-                <span class="filter__checkbox"></span>
+                <span class=" filter-field__checkbox"></span>
                 <span>Silver</span>
               </label>
             </div>
@@ -122,13 +118,13 @@
             <div class="filter-field__point">
               <label for="flamingo">
                 <input type="checkbox" id="flamingo" name="flamingo">
-                <span class="filter__checkbox"></span>
+                <span class=" filter-field__checkbox"></span>
                 <span>Pink flamingo</span>
               </label>
 
               <label for="dreams">
                 <input type="checkbox" id="dreams" name="dreams">
-                <span class="filter__checkbox"></span>
+                <span class=" filter-field__checkbox"></span>
                 <span>Dreams</span>
               </label>
             </div>
@@ -172,7 +168,6 @@
           </div>
         </form>
       </div>
-
     </main>
     <script src="js/main.js"></script>
   </body>

@@ -292,9 +292,6 @@
 })();
 'use strict';
 
-(function () {})();
-'use strict';
-
 (function () {
   var HEADER_MENU = 'header--menu';
   var LOGO_MENU = 'logo--menu';

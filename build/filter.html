@@ -44,7 +44,7 @@
         <form class="filter__form" action="#" method="POST">
 
           <fieldset class="filter__field filter-field">
-            <button class="filter-field__toggle" type="button">
+            <button class="filter-field__toggle" type="button" tabindex="1">
               <span>
                 Product
               </span>
@@ -53,35 +53,36 @@
               </svg>
             </button>
 
-            <div class="filter-field__point">
-              <label for="necklaces">
-                <input type="checkbox" id="necklaces" name="necklaces">
-                <span class=" filter-field__checkbox"></span>
-                <span>Necklaces</span>
-              </label>
+            <div class="filter-field__point filter-point">
+              <div class="filter-point__input">
+                <input type="checkbox" id="necklaces" name="necklaces" tabindex="2">
 
-              <label for="chokers">
-                <input type="checkbox" id="chokers" name="chokers">
-                <span class=" filter-field__checkbox"></span>
-                <span>Chokers</span>
-              </label>
+                <label for="necklaces">Necklaces</label>
+              </div>
 
-              <label for="rings">
-                <input type="checkbox" id="rings" name="rings">
-                <span class=" filter-field__checkbox"></span>
-                <span>Rings</span>
-              </label>
+              <div class="filter-point__input">
+                <input type="checkbox" id="chokers" name="chokers" tabindex="3">
 
-              <label for="earrings">
-                <input type="checkbox" id="earrings" name="earrings">
-                <span class=" filter-field__checkbox"></span>
-                <span>Earrings</span>
-              </label>
+                <label for="chokers">Chokers</label>
+              </div>
+
+              <div class="filter-point__input">
+                <input type="checkbox" id="rings" name="rings" tabindex="4">
+
+                <label for="rings">Rings</label>
+              </div>
+
+              <div class="filter-point__input">
+                <input type="checkbox" id="earrings" name="earrings" tabindex="5">
+
+                <label for="earrings">Earrings</label>
+              </div>
+
             </div>
           </fieldset>
 
           <fieldset class="filter__field filter-field">
-            <button class="filter-field__toggle" type="button">
+            <button class="filter-field__toggle" type="button" tabindex="6">
               <span>
                 Material
               </span>
@@ -89,24 +90,24 @@
                 <use xlink:href="#chevron_up"></use>
               </svg>
             </button>
-            <div class="filter-field__point">
 
-              <label for="gold">
-                <input type="checkbox" id="gold" name="gold">
-                <span class=" filter-field__checkbox"></span>
-                <span>Gold</span>
-              </label>
+            <div class="filter-field__point filter-point">
+              <div class="filter-point__input">
+                <input type="checkbox" id="gold" name="gold" tabindex="7">
 
-              <label for="silver">
-                <input type="checkbox" id="silver" name="silver">
-                <span class=" filter-field__checkbox"></span>
-                <span>Silver</span>
-              </label>
+                <label for="gold">Gold</label>
+              </div>
+
+              <div class="filter-point__input">
+                <input type="checkbox" id="silver" name="silver" tabindex="8">
+
+                <label for="silver">Silver</label>
+              </div>
             </div>
           </fieldset>
 
           <fieldset class="filter__field filter-field">
-            <button class="filter-field__toggle" type="button">
+            <button class="filter-field__toggle" type="button" tabindex="9">
               <span>
                 Collection
               </span>
@@ -115,23 +116,25 @@
               </svg>
             </button>
 
-            <div class="filter-field__point">
-              <label for="flamingo">
-                <input type="checkbox" id="flamingo" name="flamingo">
-                <span class=" filter-field__checkbox"></span>
-                <span>Pink flamingo</span>
-              </label>
+            <div class="filter-field__point filter-point">
 
-              <label for="dreams">
-                <input type="checkbox" id="dreams" name="dreams">
-                <span class=" filter-field__checkbox"></span>
-                <span>Dreams</span>
-              </label>
+              <div class="filter-point__input">
+                <input type="checkbox" id="flamingo" name="flamingo" tabindex="10">
+
+                <label for="flamingo">Pink flamingo</label>
+              </div>
+
+              <div class="filter-point__input">
+                <input type="checkbox" id="dreams" name="dreams" tabindex="11">
+
+                <label for="dreams">Dreams</label>
+              </div>
+
             </div>
           </fieldset>
 
           <fieldset class="filter__field filter-field">
-            <button class="filter-field__toggle" type="button">
+            <button class="filter-field__toggle" type="button" tabindex="12">
               <span>
                 Price
               </span>
@@ -140,11 +143,11 @@
               </svg>
             </button>
 
-            <div class="filter-field__point">
+            <div class="filter-field__point filter-point">
               <div class="price-slider">
                 <div class="price-slider__line price-slider__line--low">
                   <label for="low-price">$
-                    <input type="text" name="low-price" id="low-price" value="55">
+                    <input type="text" name="low-price" id="low-price" value="55" tabindex="13">
                   </label>
                 </div>
 
@@ -155,7 +158,7 @@
 
                 <div class="price-slider__line price-slider__line--top">
                   <label for="top-price">$
-                    <input type="text" name="top-price" id="top-price" value="155">
+                    <input type="text" name="top-price" id="top-price" value="155" tabindex="14">
                   </label>
                 </div>
               </div>
@@ -163,10 +166,11 @@
           </fieldset>
 
           <div class="filter__btns">
-            <button class="filter__btn filter__btn--submit" type="submit">Apply</button>
-            <button class="filter__btn filter__btn--reset" type="reset">Clear All</button>
+            <button class="filter__btn filter__btn--submit" type="submit" tabindex="15">Apply</button>
+            <button class="filter__btn filter__btn--reset" type="reset" tabindex="16">Clear All</button>
           </div>
         </form>
+
       </div>
     </main>
     <script src="js/main.js"></script>

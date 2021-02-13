@@ -1,11 +1,10 @@
 @import "vendor/swiper-vars";
 @import "vendor/swiper";
 @import "vendor/pagination";
-@import "base-normalize";
 @import "variables";
 @import "mixins";
 @import "common";
-@import "blocks/fonts";
+@import "fonts";
 @import "blocks/body";
 @import "blocks/container";
 @import "blocks/header";
@@ -45,8 +44,10 @@
 @import "blocks/catalog";
 @import "blocks/filter";
 @import "blocks/filter-field";
+@import "blocks/filter-point";
 @import "blocks/price-slider";
-@import "blocks/slider-page";
 @import "blocks/slider-item";
+// slider-page extens slider-item !!!
+@import "blocks/slider-page";
 @import "blocks/catalog-slider-navigation";
 @import "blocks/swiper-pagination-bullet";

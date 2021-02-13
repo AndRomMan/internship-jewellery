@@ -5,8 +5,8 @@
   justify-content: space-between;
 
   @media (max-width: $desktop-breakpoint) {
-    flex-basis: auto;
-    justify-content: flex-start;
+    flex-basis: 65.5%;
+    justify-content: space-between;
     margin-right: 4px;
   }
 }
@@ -24,12 +24,6 @@
 
   @media (max-width: $tablet-breakpoint) {
     margin: 0 0 7px 0;
-  }
-}
-
-.terms__list:nth-child(2n + 1) {
-  @media (max-width: $desktop-breakpoint) {
-    margin-right: 64px;
   }
 }
 

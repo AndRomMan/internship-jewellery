@@ -6,7 +6,7 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
-    margin-right: 12px;
+    margin-right: 15px;
   }
 }
 
@@ -21,8 +21,8 @@
   object-fit: cover;
 
   @media (max-width: $desktop-breakpoint) {
-    width: 133px;
-    height: 133px;
+    width: 130px;
+    height: 130px;
   }
 }
 
@@ -33,7 +33,7 @@
   object-fit: cover;
 
   @media (max-width: $desktop-breakpoint) {
-    width: 133px;
+    width: 130px;
     height: 89px;
   }
 

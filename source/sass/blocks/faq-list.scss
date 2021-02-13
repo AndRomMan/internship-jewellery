@@ -133,13 +133,12 @@
   display: none;
 }
 
-.faq-list button:hover .faq-list__icon,
-.faq-list button:focus .faq-list__icon {
+.faq-list__btn:hover .faq-list__icon,
+.faq-list__btn:focus .faq-list__icon {
   outline: 2px solid $hover-outline;
   outline-offset: 3 * $hover-outline-offset;
 }
 
-.faq-list button:active .faq-list__icon,
-.faq-list input:active .faq-list__icon {
+.faq-list__btn:active .faq-list__icon {
   opacity: $header-element-active-opacity;
 }

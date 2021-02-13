@@ -113,9 +113,9 @@ const path = {
     build: build + 'img/',
   },
   spriteSVG: {
-    source: source + 'img/sprite_svg/*.svg',
-    watch: source + 'img/sprite_svg/*.svg',
-    compressedFolder: source + 'img/sprite_svg/compressed/',
+    source: source + 'img/sprite-svg/*.svg',
+    watch: source + 'img/sprite-svg/*.svg',
+    compressedFolder: source + 'img/sprite-svg/compressed/',
     build: build + 'img/',
   },
   iconSVG: {
@@ -124,7 +124,7 @@ const path = {
     build: build + 'img/',
   },
   favicon: {
-    source: source + 'favicon/initial_img/*.png',
+    source: source + 'favicon/initial-img/*.png',
     manifest: source + 'favicon/*.*',
     compressedFolder: source + 'favicon/compressed/',
     build,

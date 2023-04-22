@@ -1,6 +1,6 @@
 # Проект "Jewellery"
 
-**[Сайт в интернете](https://andromman.github.io/jewellery/build)**.
+**[Сайт в интернете](https://andromman.github.io/jewellery/build)**
 
 Проект создан в рамках Акселератора **[HTML Academy](https://htmlacademy.ru/about)**.
 
